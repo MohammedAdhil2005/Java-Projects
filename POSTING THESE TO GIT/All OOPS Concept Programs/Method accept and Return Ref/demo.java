@@ -1,0 +1,23 @@
+class demo 
+{
+	int a=10;
+	int b=20;
+	
+	public static void accept(demo d){
+		System.out.println("It will given by accept ref --> "+d.a);
+	}
+	
+	public static demo returnref(){
+		demo d=new demo();
+		return d;
+	}
+	
+	public static void main(String[] args) 
+	{
+		demo d=new demo();
+		accept(d);
+		
+		System.out.println("It will given by return ref --> "+returnref().b);
+		
+	}
+}

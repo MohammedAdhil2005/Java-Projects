@@ -1,0 +1,30 @@
+import java.io.*;
+
+class FileHandling 
+{
+	public static void main(String[] args) throws Exception
+	{
+		File f=new File("C:\\Users\\amoha\\OneDrive\\Desktop\\QSPIDERS JAVA\\All OOPS Concept Programs\\File Handling");
+		//f.mkdirs();
+		
+		//f.createNewFile();
+		
+		//System.out.println(f.isFile());
+		
+		//System.out.println(f.isDirectory());
+		
+	    //System.out.println(f.getPath());
+		
+		//System.out.println(f.getAbsolutePath());
+		
+		//System.out.println(f.getParent());
+		
+		//f.delete();
+		
+		String[] s=f.list();
+		
+		for(String num:s){
+			System.out.println(num);
+		}
+	}
+}

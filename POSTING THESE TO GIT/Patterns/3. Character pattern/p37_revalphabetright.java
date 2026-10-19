@@ -1,0 +1,21 @@
+class p37_revalphabetright 
+{
+	public static void main(String[] args) 
+	{
+		int n=5;
+		int star=n;
+		
+		
+		System.out.println();
+		
+		for(int i=1;i<=n;i++){
+			char ch='E';
+			for(int j=1;j<=star;j++){
+				System.out.print(ch--);
+			}
+		star--;
+		System.out.println();
+		}
+		
+	}
+}

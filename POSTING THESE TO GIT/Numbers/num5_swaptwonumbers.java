@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class num5_swaptwonumbers 
+{
+	public static void swaptwo(int a,int b){
+		int temp;
+		
+		temp=a;
+	    a=b;
+		b=temp;
+		
+		System.out.println("the swapped a is " + a );
+		System.out.println("the swapped a is " + b );
+		
+	}
+	public static void main(String[] args) 
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter 1st number");
+		int a=scan.nextInt();
+		System.out.println("Enter 2nd number");
+		int b=scan.nextInt();
+		
+		swaptwo(a,b);
+
+		
+	}
+}

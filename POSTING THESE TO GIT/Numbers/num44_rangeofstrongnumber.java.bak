@@ -1,0 +1,41 @@
+class num44_rangeofstrongnumber 
+{
+	public static int factorial(int n){
+		int fact=1;
+		for(int i=1;i<=n;i++){
+			fact=fact*i;
+		}
+		return fact;
+	}
+	public static int strongnumber(int n){
+		int sum=0;
+		int org=n;
+		
+		while(n!=0){
+			int last=n%10;
+			sum=sum+factorial(last);
+			n=n/10;
+		}
+		if(sum==org){
+			return 1;
+		}
+		else{
+			return 0;
+		}
+	} 
+	
+	public static void printstrong(int n){
+		for(int i=1;i<=n;i++){
+			if(strongnumber(i)){
+				System.out.println(i+" ");
+			}
+		}
+	}
+	
+	public static void main(String[] args) 
+	{
+		int num=145;
+        printstrong(num);
+		
+	}
+}

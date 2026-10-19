@@ -1,0 +1,33 @@
+class string_9 
+{
+	public static void main(String[] args) 
+	{
+		
+		// PDF Question: 3. Search a Character Without Using indexOf()
+		//               4. Search a Character Without Using indexOf() (Not Present)
+		
+		
+        String s = "Programming";
+        char target = 'o';
+
+        boolean found =false;
+
+        for(int i=0; i<s.length(); i++)
+        {
+            char ch = s.charAt(i);
+
+            if(ch==target)
+            {
+                System.out.println("Found at index --> " + i);
+                found = true;
+                break;
+            }
+        }
+
+        if(!found)
+        {
+            System.out.println("Not Found");
+        }
+		
+	}
+}

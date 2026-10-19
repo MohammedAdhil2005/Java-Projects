@@ -1,0 +1,22 @@
+class  num38_deficientnumber
+{
+	public static void deficient(int n){
+		int sum=0;
+		
+		for(int i=1;i<n;i++){
+			if(n%i==0){
+			sum=sum+i;}
+		}
+		if(sum<n){
+			System.out.println("defiiiii");
+		}
+		else{
+			System.out.println("nottt defiii");
+		}
+	}
+	public static void main(String[] args) 
+	{
+		int num=10; //6 --> not defiiii
+		deficient(num);
+	}
+}

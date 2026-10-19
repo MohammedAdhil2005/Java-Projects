@@ -1,0 +1,155 @@
+import java.util.Scanner;
+class javasirleave 
+{
+	
+	//prime number
+	public static void prime(int n){
+		int c=0;
+		
+		for(int i=1;i<=n;i++){
+		if(n%i==0){
+			c++;
+		}
+		
+		}
+		 if(c==2){
+			System.out.println("\nThe given number is --> Prime");
+		}
+		else{
+			System.out.println("\nThe given number is --> Not prime");
+		}
+		
+		System.out.println("\n ----------------------------------- ");
+		
+	}
+	
+	
+	
+	//check palindrome
+	public static void palindrome(int n){
+		int rev=0;
+		int org=n;
+		
+		while(n!=0){
+			int last=n%10;
+			rev=rev*10+last;
+			n=n/10;
+		}
+		if(org==rev){
+		   System.out.println("\nYEPPP! --> "+rev+" its palindrome ");
+		   }
+		 else{
+		   System.out.println("\nNOPEE! --> "+rev+" its not palindrome ");
+		 }
+		 
+		 System.out.println("\n ----------------------------------- ");
+		   
+	}
+	
+	
+	
+	//check arms
+	public static int count(int n){
+		int c=0;
+		
+		while(n!=0){
+		    n=n/10;
+			c++;
+		}
+		
+		return c;
+		
+	}
+	
+	public static int pow(int b,int e){
+		int powervalue=1;
+		
+		for(int i=1;i<=e;i++){
+			powervalue=powervalue*b;
+		}
+		
+		return powervalue;
+	}
+	
+	public static void arms(int n,int c){
+		int org=n;
+		int sum=0;
+		
+		while(n!=0){
+			int last=n%10;
+			sum=sum+pow(last,c);
+			n=n/10;
+		}
+		
+		
+		if(sum==org){
+			System.out.println("\nArmstrong number !");
+		}
+		else{
+			System.out.println("\nNot Armstrong number !");
+		}
+		
+		System.out.println("\n ----------------------------------- ");
+		
+		}
+		
+	
+	
+	//Factorial
+	public static void fact(int n){
+		int fact=1;
+		
+		for(int i=1;i<=n;i++){
+			fact=fact*i;
+		}
+		
+		System.out.println("\nFactorial of the given number is ---> "+fact);
+		
+		System.out.println("\n ----------------------------------- ");
+	}
+	
+	
+	//Fibonacci
+	public static void fibo(int n){
+		int a=0;
+		int b=1;
+		
+		System.out.println("\nFibonacci numbers are  ---> \n");
+		
+		while(a<n){
+			
+			System.out.print(a+" ");
+			int c=a+b;
+			a=b;
+			b=c;
+		}
+		
+		System.out.println();
+		
+		System.out.println("\n ----------------------------------- ");
+	}
+	
+	
+	//MAIN
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("\nEnter here ----> ");
+		int user=sc.nextInt();
+	    prime(user);
+		
+		
+		palindrome(user);
+		
+		
+		int count=count(user);
+		arms(user,count);
+		
+		
+		fact(user);
+		
+		
+		fibo(user);
+		
+	}
+}

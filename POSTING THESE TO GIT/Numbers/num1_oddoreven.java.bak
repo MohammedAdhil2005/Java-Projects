@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class num1_oddoreven 
+{
+	public static void oddoreven(int n){
+		if(n%2==0){
+			System.out.print("even");
+		}
+		else{
+			System.out.print("odd");
+		}
+	}
+	public static void main(String[] args) 
+	{
+		Scanner scan =new Scanner(System.in);
+		int num=scan.nextInt();
+        oddoreven(num);
+	}
+}

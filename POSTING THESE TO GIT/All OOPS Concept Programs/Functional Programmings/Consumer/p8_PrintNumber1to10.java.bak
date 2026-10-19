@@ -1,0 +1,14 @@
+import java.util.function.*;
+
+class  p8_PrintNumber1to10
+{
+	public static void main(String[] args) 
+	{
+		Consumer<Integer> c=(a)->{
+			for(int i=1;i<=10;i++){
+				System.out.println(i);
+			}
+		};
+		
+	}
+}

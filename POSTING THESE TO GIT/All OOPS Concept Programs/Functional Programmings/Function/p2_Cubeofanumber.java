@@ -1,0 +1,11 @@
+import java.util.function.*;
+
+class  p2_Cubeofanumber
+{
+	public static void main(String[] args) 
+	{
+		Function<Integer,Integer> f=(a)-> a*a*a;
+		
+		System.out.println("CUBE VALUE IS ---> "+f.apply(2));
+	}
+}

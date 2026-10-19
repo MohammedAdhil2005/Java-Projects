@@ -1,0 +1,17 @@
+Check String contains only digits
+
+Check String contains only alphabets
+
+Check String contains alphanumeric characters
+Remove duplicate words
+Find duplicate words
+Count frequency of each word
+Find the most repeated word
+Find the longest word in a sentence
+Find the second longest word
+Find the longest substring without repeating characters
+Find all substrings of a String
+Find all permutations of a String
+Check String rotation
+Check String is a pangram
+Check String is a palindrome ignoring spaces and special characters

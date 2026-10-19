@@ -1,0 +1,21 @@
+class num46_lcm 
+{
+	public static void lcm(int a,int b){
+		int max=(a>b)?a:b;
+		
+		while(true){
+			if(max%a==0 && max%b==0){
+				System.out.println("LCM  ------>> "+max);break;
+			}
+			max++;
+		}
+
+	}
+	public static void main(String[] args) 
+	{
+		int a=12;
+		int b=18;
+		
+		lcm(a,b);
+	}
+}

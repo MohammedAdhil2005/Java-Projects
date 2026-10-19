@@ -1,0 +1,30 @@
+class  num50_presentfibonaccinumber
+{
+	public static void presentfib(int n){
+		int a=0;
+		int b=1;
+		boolean ispr=false;
+		while(a<=n){
+			if(a==n){
+			   ispr=true;
+			}
+			System.out.println(a);
+			int c=a+b;
+			a=b;
+			b=c;
+			
+		}
+		if(ispr){
+			System.out.println("Yeppp");
+		}
+		else{
+			System.out.println("nopppe");
+		}
+		
+		}
+	public static void main(String[] args) 
+	{
+		int num=5;
+		presentfib(num);
+	}
+}

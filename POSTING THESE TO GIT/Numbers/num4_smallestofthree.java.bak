@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class num4_smallestofthree 
+{
+	public static int issmaller(int a,int b, int c){
+		int smallnum=(a<b && a<c)? a : (b<c)? b:c;
+		return smallnum;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter 1st number");
+		int a=scan.nextInt();
+		System.out.println("Enter 2nd number");
+		int b=scan.nextInt();
+		System.out.println("Enter 3rd number");
+		int c=scan.nextInt();
+		int res=issmaller(a,b,c);
+		System.out.println("the largest num is "+res);
+
+	}
+}

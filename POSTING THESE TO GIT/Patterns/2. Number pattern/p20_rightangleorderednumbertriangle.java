@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class  p20_rightangleorderednumbertriangle
+{
+	public static void p20(int n){
+		int num=1;
+		
+		for(int i=1;i<=n;i++){
+			for(int j=1;j<=i;j++){
+				System.out.print(num++ +" ");
+			}
+			System.out.println();
+			
+		}
+	}
+	
+	public static void main(String[] args) 
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.print("\n Enter the how many rows of right angle ordered number triangle  ---->   ");
+		int num=scan.nextInt();;
+		System.out.println();
+		p20(num);
+	}
+}

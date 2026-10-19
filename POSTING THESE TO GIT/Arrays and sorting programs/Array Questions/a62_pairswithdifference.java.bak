@@ -1,0 +1,32 @@
+import java.util.Arrays;
+
+class  a62_pairswithdifference 
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {2,7,11,15,5};
+        int target = 4;
+		
+		boolean ispresent=false;
+		
+		for(int i=0;i<a.length;i++){
+			for(int j=i+1;j<a.length;j++){
+				
+				int temp=a[i]-a[j];
+				
+				//if(temp<0){  // instead of writing this using math.abs(temp)==target
+				//	temp=temp * -1;
+				//}
+				
+				if(Math.abs(temp)==target){
+					System.out.println(a[i]+" - "+a[j]+" difference of ---> "+target);
+					ispresent=true;
+				}
+			}
+		}
+		
+		if(!ispresent){
+			System.out.println("\nNo matching pairs!!!!");
+		}
+	}
+}

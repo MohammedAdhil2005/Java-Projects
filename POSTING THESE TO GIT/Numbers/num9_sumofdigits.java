@@ -1,0 +1,19 @@
+class num9_sumofdigits 
+{
+	public static int sumofdigit(int n){
+		int sum=0;
+		
+		while(n!=0){
+			int last=n%10;
+			sum=sum+last;
+			n=n/10;
+		}
+		return sum;
+	}
+	public static void main(String[] args) 
+	{
+		int n=123;
+		int res=sumofdigit(n);
+		System.out.println("\n"+ n+" sum of this number is --> "+ res);
+	}
+}

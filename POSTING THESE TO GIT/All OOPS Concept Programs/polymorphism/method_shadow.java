@@ -1,0 +1,22 @@
+class parent
+{
+	public static void m1(){
+		System.out.println("First block");
+	}
+}
+
+class child extends parent
+{
+	public static void m1(){
+		System.out.println("Second block");
+	}
+}
+
+class  method_shadow
+{
+	public static void main(String[] args) 
+	{
+		parent p=new child();
+		p.m1();
+	}
+}

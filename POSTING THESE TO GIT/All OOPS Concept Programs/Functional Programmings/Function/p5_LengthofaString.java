@@ -1,0 +1,11 @@
+import java.util.function.*;
+
+class  p5_LengthofaString
+{
+	public static void main(String[] args) 
+	{
+		Function<String,Integer> f=(a)-> a.length();
+		
+		System.out.println("LENGTH IS ---> "+f.apply("ADHIL"));
+	}
+}

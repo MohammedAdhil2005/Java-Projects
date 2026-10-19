@@ -1,0 +1,21 @@
+import java.util.Arrays;
+
+class Leet7_shufflethearray_1470  
+{
+	public static void main(String[] args) 
+	{
+		
+	    int[] nums={1,1,1,2,2,2};
+		int[] a=new int[nums.length];
+		
+		int n=3;
+		int j=0;
+		
+		for(int i=0;i<n;i++){
+			a[j++]=nums[i];
+			a[j++]=nums[i+n];
+		}
+		
+		System.out.println("\nSHUFFLED ARRAY IS ---> "+Arrays.toString(a));
+	}
+}

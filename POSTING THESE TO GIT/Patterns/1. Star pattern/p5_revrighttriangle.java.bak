@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class  p5_revrighttriangle
+{
+	public static void p5(int n){
+		int star=n;
+		
+		for(int i=1;i<=n;i++){
+			for(int j=1;j<=star;j++){
+				System.out.print("*");
+			}
+			System.out.println();
+			star--;
+        }
+	}
+	public static void main(String[] args) 
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.print("\n Enter the how many rows of right angle star triangle  ---->   ");
+		int num=scan.nextInt();;
+		System.out.println();
+		p5(num);
+	}
+}

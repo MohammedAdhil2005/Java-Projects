@@ -1,0 +1,20 @@
+class  string_19
+{
+	public static void main(String[] args) 
+	{
+		// Question: Count Uppercase Letters
+         
+		String s="Adhil";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch>='A' && ch<='Z'){
+				count++;
+			}
+		}
+		System.out.println("\nUppercase letter count are --> "+count);
+	}
+}

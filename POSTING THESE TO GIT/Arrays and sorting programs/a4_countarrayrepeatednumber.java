@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class  a4_countarrayrepeatednumber
+{
+	static Scanner sc=new Scanner(System.in);
+	
+	public static void add(int[] a){
+		
+		System.out.println("\nEnter the values to store in an Array ----> ");
+		
+		for(int i=0;i<a.length;i++){
+			System.out.print((i+1)+". ");
+			a[i]=sc.nextInt();
+		}
+	}
+	
+	
+	//MAIN LOGIC || HERE
+	
+	public static int repeated(int[] n,int key){
+		
+		int count=0;
+		
+		for(int i=0;i<n.length;i++){
+			if(n[i]==key){
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+		System.out.print("\nEnter the size of an Array ----> ");
+		int size=sc.nextInt();
+		
+		int[] a=new int[size];
+		add(a);
+		
+		System.out.print("\nEnter the key value to find repeated number of times?  ----> ");
+		int key=sc.nextInt();
+		
+		int res=repeated(a,key);
+		System.out.println(res+" ---- times its repeated!!!");
+	}
+}

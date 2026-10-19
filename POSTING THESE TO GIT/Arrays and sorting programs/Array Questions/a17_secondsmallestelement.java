@@ -1,0 +1,22 @@
+class a17_secondsmallestelement 
+{
+	public static void main(String[] args) 
+	{
+		int[] a={10,20,20,40};
+		
+		int fmin=Integer.MAX_VALUE;
+		int smin=Integer.MAX_VALUE;
+		
+		
+		for(int i=0;i<a.length;i++){
+			if(fmin>a[i]){
+				smin=fmin;
+				fmin=a[i];
+			}
+			else if(smin>a[i]  && a[i]!=fmin){
+				smin=a[i];
+			}
+		}
+		System.out.println(smin);
+	}
+}

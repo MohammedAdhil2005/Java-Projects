@@ -1,0 +1,34 @@
+ abstract class test
+{
+	public abstract void a1();
+	
+	int a=10;
+	
+	public void m1(){
+		System.out.println("This is non static method!!!");
+	}
+	
+	test(){
+		System.out.println("This is Constructor block!!");
+	}
+	
+	{
+		a=20;
+		a=30;
+	}
+}
+
+class main extends test
+{
+	public void a1(){
+		System.out.println("This is abstract body given by the child!!");
+	}
+	
+	public static void main(String[] args) 
+	{
+		main m=new main();
+		System.out.println(m.a);
+		m.m1();
+		m.a1();
+	}
+}

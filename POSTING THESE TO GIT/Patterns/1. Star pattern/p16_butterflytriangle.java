@@ -1,0 +1,57 @@
+import java.util.Scanner;
+class p16_butterflytriangle 
+{
+	public static void p16(int n){
+		int star=1;
+		int space=n*2-2;
+		for(int i=1;i<=n;i++){
+			for(int j=1;j<=star;j++){
+				System.out.print("*");
+			}
+			
+			for(int k=1;k<=space;k++){
+				System.out.print(" ");
+			}
+			
+			for(int j=1;j<=star;j++){
+				System.out.print("*");
+			}
+			
+			System.out.println();
+			star++;
+			space=space-2;
+		}
+		
+		star=n-1;
+		space=2;
+		
+		for(int i=1;i<n;i++){
+			for(int j=1;j<=star;j++){
+				System.out.print("*");
+			}
+			
+			for(int k=1;k<=space;k++){
+				System.out.print(" ");
+			}
+			
+			for(int j=1;j<=star;j++){
+				System.out.print("*");
+			}
+			
+			System.out.println();
+			star=star-1;
+			space+=2;
+		}
+		
+		
+	}
+	
+	public static void main(String[] args) 
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.print("\n Enter the how many rows of butterfly triangle  ---->   ");
+		int num=scan.nextInt();;
+		System.out.println();
+		p16(num);
+	}
+}

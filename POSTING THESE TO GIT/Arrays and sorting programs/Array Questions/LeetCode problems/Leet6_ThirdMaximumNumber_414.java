@@ -1,0 +1,36 @@
+import java.util.Arrays;
+
+class Leet6_ThirdMaximumNumber_414  
+{
+	public static void main(String[] args) 
+	{
+		int[] a={3,2,1}; //another input --> 2,1
+		
+        long fmax = Long.MIN_VALUE;
+        long smax = Long.MIN_VALUE;
+        long tmax = Long.MIN_VALUE;
+		
+		for(int i=0;i<a.length;i++){
+			if(a[i]>fmax){
+				tmax=smax;
+				smax=fmax;
+				fmax=a[i];
+			}
+			else if(a[i]>smax && a[i]!=fmax){
+				tmax=smax;
+				smax=a[i];
+			}
+			else if(a[i]>tmax && a[i]!=fmax && a[i]!=smax){
+				tmax=a[i];
+			}
+		}
+		
+		if(tmax==Long.MIN_VALUE){
+			System.out.println("\nSecond max is---> "+smax);
+		}
+		else{
+			System.out.println("\nThird max is---> "+tmax);
+		}
+		
+	}
+}

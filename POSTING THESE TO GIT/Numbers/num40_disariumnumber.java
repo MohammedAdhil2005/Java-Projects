@@ -1,0 +1,49 @@
+class num40_disariumnumber 
+{
+	public static int count(int n){
+		int c=0;
+		while(n!=0){
+			n=n/10;
+			c++;
+		}
+		return c;
+	}
+	
+	public static int power(int b,int e){
+		int powervalue=1;
+		
+		for(int i=1;i<=e;i++){
+			powervalue=powervalue*b;
+		}
+		return powervalue;
+	}
+	
+	public static void disarium(int n){
+	int org=n;
+	int sum=0;
+	int totcount=count(n);
+	
+	
+	
+	while(n!=0){
+		int last=n%10;
+		sum=sum+power(last,totcount);
+		n=n/10;
+		
+		totcount--;
+	}
+	
+	if(sum==org){
+		System.out.println("disariummmm");
+	}else{
+		System.out.println("not disariummmm");}
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+		int  num=135;
+		disarium(num);
+
+	}
+}

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class  num13_largestofdigit
+{
+	public static int largestofdigit(int n){
+	    int max=0;
+		while(n!=0){
+			int last=n%10;
+			if(last>max){
+				max=last;
+			}
+			n=n/10;
+		}
+		return max;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner scan=new Scanner(System.in);
+		int num=scan.nextInt();
+		int res=largestofdigit(num);
+		
+		System.out.println(num+" largest digit of this number is "+res);
+	}
+}

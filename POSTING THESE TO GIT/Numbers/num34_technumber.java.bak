@@ -1,0 +1,42 @@
+class  num34_technumber
+{
+	public static void tech(int n){
+		int org=n;
+		int count=0;
+		while(n!=0){
+			n=n/10;
+			count++;
+		}
+		
+		if(count%2!=0){
+			System.out.println("not a tech");
+			return;
+		}
+		
+			int temp=1;
+			
+			for(int i=1;i<=count/2;i++){
+				temp=temp*10;
+			}
+			
+			int first=org/temp;
+			int sec=org%temp;
+			
+			int sum=first+sec;
+			
+			if(sum*sum==org){
+				System.out.println("tech");
+			}
+			else{
+				System.out.println("not tech");
+			}
+			
+		
+	}
+	public static void main(String[] args) 
+	{
+		int num=2125;
+		tech(num);
+		
+	}
+}

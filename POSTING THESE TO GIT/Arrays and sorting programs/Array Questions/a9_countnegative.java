@@ -1,0 +1,18 @@
+class  a9_countnegative
+{
+	public static void nc(int[] a){
+		int nc=0;
+		
+		for(int i=0;i<a.length;i++){
+			if(a[i]<0){
+				nc++;
+			}
+		}
+		System.out.println("Negative count is ---> "+nc);
+	}
+	public static void main(String[] args) 
+	{
+		int[] a={7,3,5,10,-4,-8};
+		nc(a);
+	}
+}

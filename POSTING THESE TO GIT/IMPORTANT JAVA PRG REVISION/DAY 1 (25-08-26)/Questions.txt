@@ -1,0 +1,36 @@
+## 🔥 Top 20 Java Interview Programs
+
+### 🔢 Numbers — Top 7
+
+1. **Prime Number**
+2. **Palindrome Number**
+3. **Armstrong Number**
+4. **Fibonacci Series**
+5. **Factorial of a Number**
+6. **Reverse a Number**
+7. **Perfect Number**
+
+### 📦 Arrays — Top 7
+
+8. **Find Largest Element**
+9. **Find Second Largest Element**
+10. **Find Duplicate Elements**
+11. **Find Missing Number**
+12. **Remove Duplicate Elements**
+13. **Reverse an Array**
+14. **Sort an Array Without Using `Arrays.sort()`**
+
+### 🔤 Strings — Top 6
+
+15. **Reverse a String**
+16. **String Palindrome**
+17. **Check Anagram**
+18. **Count Character Frequency**
+19. **Find First Non-Repeated Character**
+20. **Remove Duplicate Characters**
+
+### ⭐ Best order for interview preparation
+
+**Numbers → Arrays → Strings**
+
+For students, I would especially make sure they can solve **#9, #10, #11, #15, #17, #18 and #19 without using built-in shortcuts**, because these are very useful for interview practice.

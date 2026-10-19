@@ -1,0 +1,22 @@
+class demo 
+{
+	public demo m1(){
+		System.out.println("--> m1 method ");
+		return this;
+	}
+	
+	public demo m2(){
+		System.out.println("--> m2 method ");
+		return this;
+	}
+	
+	public static void m3(){
+		System.out.println("void --> m3 method ");
+	}
+	
+	public static void main(String[] args) 
+	{
+		demo d=new demo();
+		d.m1().m2().m3();
+	}
+}

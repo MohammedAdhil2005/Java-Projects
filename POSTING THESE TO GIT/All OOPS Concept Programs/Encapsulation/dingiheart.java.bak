@@ -1,0 +1,23 @@
+class dingiheart 
+{
+	private String bname="Dinga";
+	
+	public String friend(){
+		return bname;
+	}
+	
+	public void setnewboy(String name){
+		this.bname=name;
+		System.out.println("New mapla name --> "+name);
+	}
+	
+	public static void main(String[] args) 
+	{
+		dingiheart d=new dingiheart();
+		System.out.println(d.friend());
+				
+	}
+	
+}
+
+

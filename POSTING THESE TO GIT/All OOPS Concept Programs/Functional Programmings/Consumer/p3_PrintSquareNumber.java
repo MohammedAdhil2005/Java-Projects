@@ -1,0 +1,12 @@
+import java.util.function.*;
+
+class  p3_PrintSquareNumber
+{
+	public static void main(String[] args) 
+	{
+		Consumer<Integer> c=(a)->
+		System.out.println("Square is ---> "+a*a);
+		
+		c.accept(4);
+	}
+}

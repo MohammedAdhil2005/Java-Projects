@@ -1,0 +1,45 @@
+import java.util.*;
+
+class book
+{
+	int id;
+	int price;
+	String name;
+	
+	book(int id,int price,String name){
+		this.id=id;
+		this.price=price;
+		this.name=name;
+	}
+	
+	public boolean equals(Object o){
+		book b=(book)o;
+		return this.id==b.id && this.price==b.price && this.name.equals(b.name);
+	}
+}
+
+class  Arraylist_Search_object
+{
+	public static void main(String[] args) 
+	{
+		ArrayList al=new ArrayList();
+		al.add(new book(1,500,"java"));
+		al.add(new book(2,300,"sql"));
+		al.add(new book(3,450,"python"));
+		
+		Scanner sc=new Scanner(System.in);
+	    
+		//searching entire object
+		
+		boolean present=false;
+		book target=new book(2,300,"sql");
+		
+		System.out.println(al.contains(target));
+		
+		for (Object o:al)
+		{
+			book b=(book)o;
+			System.out.println(b.name+""+b.price+""+b.id);
+		}
+}
+}

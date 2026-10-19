@@ -1,0 +1,55 @@
+import java.util.Scanner;
+class p14_leftwardspacetriangle 
+{
+	public static void p14(int n){
+		int space=n-1;
+		int star=1;
+		
+		for(int i=1;i<=n;i++){
+			for(int k=1;k<=space;k++){
+				System.out.print(" ");
+			}
+			
+			for(int j=1;j<=star;j++){
+				if(i==1||j==1||j==star){
+				System.out.print("*");
+				}
+				else{
+				System.out.print(" ");
+				}
+			}
+			System.out.println();
+			space--;
+			star++;
+		}
+		
+		space=1;
+		star=n-1;
+		
+		for(int i=1;i<=n;i++){
+			for(int k=1;k<=space;k++){
+				System.out.print(" ");
+			}
+			
+			for(int j=1;j<=star;j++){
+				if(i==n||j==1||j==star){
+				System.out.print("*");
+				}
+				else{
+				System.out.print(" ");
+				}
+			}
+			System.out.println();
+			space++;
+			star--;
+		}
+	}
+	public static void main(String[] args) 
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.print("\n Enter the how many rows of left angle star triangle  ---->   ");
+		int num=scan.nextInt();;
+		System.out.println();
+		p14(num);
+	}
+}

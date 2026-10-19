@@ -1,0 +1,17 @@
+import java.util.Arrays;
+class a10_copyonearray 
+{
+	public static void main(String[] args) 
+	{
+		int[] a={10,20,30};
+		
+		int[] copy=new int[a.length]; 
+		
+		//int index=0;
+		
+		for(int i=0;i<a.length;i++){
+			copy[i]=a[i];    //copy[index++]=a[i];
+		}
+		System.out.println(Arrays.toString(copy));
+	}
+}

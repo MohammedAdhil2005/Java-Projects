@@ -1,0 +1,51 @@
+## Predicate — Use `Predicate<T>` and `test()`
+1. Check whether a number is even.
+2. Check whether a number is odd.
+3. Check whether a number is positive.
+4. Check whether a number is negative.
+5. Check whether a number is greater than 50.
+6. Check whether a number is divisible by 5.
+7. Check whether a String starts with `"A"`.
+8. Check whether a String ends with `"g"`.
+9. Check whether a String length is greater than 5.
+10. Check whether a person is eligible to vote.
+---
+## Function — Use `Function<T,R>` and `apply()`
+11. Find the square of a number.
+12. Find the cube of a number.
+13. Find double of a number.
+14. Add 10 to a number.
+15. Find the length of a String.
+16. Convert a String to uppercase.
+17. Convert a String to lowercase.
+18. Convert Integer into String.
+19. Convert Celsius into Fahrenheit.
+20. Find the first character of a String.
+---
+## Consumer — Use `Consumer<T>` and `accept()`
+21. Print a number.
+22. Print a person's name.
+23. Print the square of a number.
+24. Print whether a number is even or odd.
+25. Print a String in uppercase.
+26. Print `"Welcome"` followed by a name.
+27. Print each character of a String.
+28. Print numbers from 1 to 10.
+29. Print the length of a String.
+30. Print the multiplication table of a number.
+
+---
+
+## Supplier — Use `Supplier<T>` and `get()`
+
+31. Return your name.
+32. Return your college name.
+33. Return `"Welcome to Java"`.
+34. Return a random number.
+35. Return the current year.
+36. Return a random OTP.
+37. Return a default username.
+38. Return `"Good Morning"`.
+39. Return the value `100`.
+40. Return a random password.
+41.

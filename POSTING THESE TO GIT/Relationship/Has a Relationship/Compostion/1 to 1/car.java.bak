@@ -1,0 +1,18 @@
+class car 
+{
+	String cname;
+	String color;
+	int cprice;
+	
+	car(String cname,String color,int cprice){
+		this.cname=cname;
+		this.color=color;
+		this.cprice=cprice;
+	}
+	
+	tyre t1=new tyre("MRF",1000);
+	tyre t2=new tyre("apollo",1000);
+	tyre t3=new tyre("ceat",1000);
+	tyre t4=new tyre("JK",1000);
+
+}

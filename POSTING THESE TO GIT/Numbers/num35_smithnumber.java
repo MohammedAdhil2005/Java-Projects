@@ -1,0 +1,43 @@
+class num35_smithnumber 
+{
+	 public static int digitSum(int n)
+    {
+        int sum = 0;
+
+        while(n > 0)
+        {
+            sum = sum + (n % 10);
+            n = n / 10;
+        }
+
+        return sum;
+    }
+
+    public static void smith(int n)
+    {
+        int original = n;
+        int originalSum = digitSum(n);
+        int factorSum = 0;
+
+
+        for(int i = 2; i <= n; i++)
+        {
+            while(n % i == 0)
+            {
+                factorSum = factorSum + digitSum(i);
+                n = n / i;
+            }
+        }
+
+
+        if(factorSum == originalSum && original != 2 && original != 3)
+            System.out.println("Smith Number");
+        else
+            System.out.println("Not Smith Number");
+    }
+
+    public static void main(String[] args)
+    {
+        smith(666);
+    }
+}

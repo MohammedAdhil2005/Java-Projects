@@ -1,0 +1,22 @@
+import java.util.Arrays;
+class a20_swapfirstandlastelement 
+{
+	public static void main(String[] args) 
+	{
+		int[] a={10,20,30,22,40};
+		
+		int temp=0;
+		int firstelement=0;
+		int lastelement=a.length-1;
+		
+		for(int i=0;i<a.length;i++){
+			
+			a[temp]=a[firstelement];
+			a[firstelement]=a[lastelement];
+			a[lastelement]=a[temp];
+			
+			
+		}
+		System.out.println(Arrays.toString(a));
+	}
+}

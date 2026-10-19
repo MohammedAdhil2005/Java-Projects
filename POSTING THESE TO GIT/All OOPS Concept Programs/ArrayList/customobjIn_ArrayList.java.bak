@@ -1,0 +1,70 @@
+import java.util.ArrayList;
+
+class book
+{
+	int price;
+	String bname;
+	
+	book(int price, String bname){
+		this.price=price;
+		this.bname=bname;
+	}
+	
+	public String toString(){
+		return price+" "+bname;
+	}
+}
+
+class Mobile
+{
+	int Mprice;
+	String Mname;
+	
+	Mobile(int Mprice, String Mname){
+		this.Mprice=Mprice;
+		this.Mname=Mname;
+	}
+	
+	public String toString(){
+		return Mprice+" "+Mname;
+	}
+}
+
+
+class customobjIn_ArrayList
+{
+	public static void main(String[] args) 
+	{
+		
+		ArrayList l1=new ArrayList();
+		
+		System.out.println(l1); //it will so nothing!!!
+		
+		l1.add(new book(100,"java"));
+		l1.add(new book(1500,"python"));
+		
+		l1.add(new Mobile(1000,"Oneplus"));
+		l1.add(new Mobile(15000,"Apple"));
+		
+		
+		System.out.println(l1);
+		
+		/*for(Object o:l1){  [if we don't want to return toString using this format]
+			
+			if(o instanceof Mobile)
+            {
+                Mobile ans = (Mobile)o;
+                System.out.println(ans.Mprice + " " + ans.Mname);
+            }
+
+            if(o instanceof book)
+            {
+                book bans = (book)o;
+                System.out.println(bans.price + " " + bans.bname);
+            }
+		}*/
+		
+		System.out.println(l1); //we have overriden string thats why in it print state instead of 
+		                        //                                       stored addresss shown!!!
+	}
+}

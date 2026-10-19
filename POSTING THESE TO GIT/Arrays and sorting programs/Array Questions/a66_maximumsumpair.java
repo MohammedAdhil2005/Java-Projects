@@ -1,0 +1,28 @@
+class  a66_maximumsumpair
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {10, 25, 15, 40, 30};
+		
+		int max=Integer.MIN_VALUE;
+		
+		int first=0;
+		int last=0;
+		
+		for(int i=0;i<a.length;i++){
+			for(int j=i+1;j<a.length;j++){
+				int temp=a[i]+a[j];
+				
+				if(max<temp){
+					max=temp;
+					first=a[i];
+					last=a[j];
+				}
+			}
+		}
+		
+		System.out.print("\nMaximum value and sum pairs are ---> "+max+" and");
+		System.out.println(" ("+first+" , "+last+")");
+		
+	}
+}

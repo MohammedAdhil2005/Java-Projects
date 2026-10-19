@@ -1,0 +1,25 @@
+class num48_fibonacci 
+{
+	public static void fibo(int n){
+		int a=0;
+		int b=1;
+		System.out.println("\nFibonacci numbers are \n ");
+
+		while(a<n){
+			 
+		     System.out.print(" "+a+" ");
+			 int c=a+b;
+			 a=b;
+			 b=c;
+			 
+			 
+		}
+		System.out.println();
+	}
+	public static void main(String[] args) 
+	{
+		int num=5;
+		fibo(num);
+		
+	}
+}

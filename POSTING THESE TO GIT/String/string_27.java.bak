@@ -1,0 +1,20 @@
+class string_27 
+{
+	public static void main(String[] args) 
+	{
+		// Question: Count the number of alphabetic characters (a–z, A–Z) in a string.
+
+        String s="Adhil 221";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if((ch<'0'||ch>'9') && ch!=' '){
+				count++;
+			}
+		}
+		System.out.println("count of the alphabets --> "+count);
+	}
+}

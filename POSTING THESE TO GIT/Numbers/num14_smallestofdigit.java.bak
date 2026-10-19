@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class num14_smallestofdigit 
+{
+	public static int  smallestofdigit(int n){
+		int min=9;
+		
+		while(n!=0){
+			int last=n%10;
+			if(last<=min){
+				min=last;
+			}
+			n=n/10;
+		}
+		return min;
+	}
+	
+	public static void main(String[] args) 
+	{
+		Scanner scan=new Scanner(System.in);
+		int num=scan.nextInt();
+		int res=smallestofdigit(num);
+		
+		System.out.println(num+" smallest digit of this number is "+res);
+	}
+}

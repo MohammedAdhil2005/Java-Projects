@@ -1,0 +1,17 @@
+class Main1 
+{
+	public static void main(String[] args) 
+	{
+		
+		lorry l=new lorry("Benz","red",100);
+		
+		
+		System.out.print("\nlorry name ----> "+l.lname);
+		System.out.print("\nlorry color ----> "+l.lcolor);
+		System.out.print("\nlorry price ----> "+l.lprice);
+		
+		System.out.print("\nlorry Engine type ----> "+l.lorryengine.type);
+		System.out.print("\nlorry Engine hp ----> "+l.lorryengine.hp);
+		
+	}
+}

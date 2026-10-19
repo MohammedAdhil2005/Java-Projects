@@ -1,0 +1,46 @@
+class num43_armstrongnumber 
+{
+	public static int count(int n){
+		int c=0;
+		while(n!=0){
+			n=n/10;
+			c++;
+		}
+		return c;
+	}
+	public static int pow(int b,int e){
+		int powvalue=1;
+		for(int i=1;i<=e;i++){
+			powvalue=powvalue*b;
+		}
+		return powvalue;
+	} 
+	public static boolean arms(int n,int c){
+		int org=n;
+		int sum=0;
+		
+		while(n!=0){
+			int last=n%10;
+			sum=sum+pow(last,c);
+			n=n/10;
+		}
+		
+		return sum==org;
+	}
+	
+	public static void printarms(int n){
+		for(int i=10;i<=n;i++){
+			int c=count(i);
+			if(arms(i,c)){
+				System.out.println(i+" ");
+			}
+		}
+	}
+	public static void main(String[] args) 
+	{
+		int n=1000;		
+		System.out.println("arms numbers are ");
+		printarms(n);
+		
+	}
+}

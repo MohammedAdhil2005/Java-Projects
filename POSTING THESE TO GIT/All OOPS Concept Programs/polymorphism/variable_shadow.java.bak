@@ -1,0 +1,24 @@
+class base
+{
+	int a=10;
+}
+
+class derived extends base
+{
+	int a=20;
+	
+	
+		System.out.println(super.a);
+		System.out.println(a);
+	}
+}
+
+class variable_shadow
+{
+	public static void main(String[] args) 
+	{
+		derived d=new derived();
+		
+		d.get();
+	}
+}

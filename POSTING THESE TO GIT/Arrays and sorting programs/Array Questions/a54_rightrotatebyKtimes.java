@@ -1,0 +1,32 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+class a54_rightrotatebyKtimes 
+{
+	public static void main(String[] args) 
+	{
+		
+		Scanner sc=new Scanner(System.in);
+		
+		int[] a={10,20,30};
+		
+		System.out.println("\nBefore rotation --> "+Arrays.toString(a));
+		
+		System.out.print("\nEnter how many you want right rotate ---> ");
+		int k=sc.nextInt();
+		
+		for(int i=1;i<=k;i++){
+			
+			int temp=a[a.length-1];
+			
+			for(int j=a.length-1;j>0;j--){
+				a[j]=a[j-1];
+			}
+			
+			a[0]=temp;
+		}
+		
+		System.out.println("\nAfter right rotaion by k times --> "+Arrays.toString(a));
+		
+	}
+}

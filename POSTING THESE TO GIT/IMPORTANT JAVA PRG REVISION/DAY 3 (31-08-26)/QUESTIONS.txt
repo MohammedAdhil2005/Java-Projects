@@ -1,0 +1,98 @@
+JAVA PROGRAMMING QUESTIONS
+==========================
+
+STRING PROGRAMS
+================
+
+1. Write a Java program to reverse a given String without using StringBuilder or StringBuffer.
+
+Example:
+Input  : Java
+Output : avaJ
+
+
+2. Write a Java program to check whether a given String is a Palindrome or not.
+
+Example:
+Input  : madam
+Output : Palindrome
+
+
+3. Write a Java program to count the number of vowels, consonants, digits, and special characters in a given String.
+
+Example:
+Input  : Java123@
+Output :
+Vowels      : 2
+Consonants  : 2
+Digits      : 3
+Special     : 1
+
+
+ARRAY PROGRAMS
+===============
+
+4. Write a Java program to find the largest and smallest element in an integer array.
+
+Example:
+Input  : {10, 25, 5, 40, 15}
+Output :
+Largest  : 40
+Smallest : 5
+
+
+5. Write a Java program to find the second largest element in an integer array.
+
+Example:
+Input  : {10, 50, 30, 40, 20}
+Output : 40
+
+
+6. Write a Java program to remove duplicate elements from an integer array.
+
+Example:
+Input  : {10, 20, 10, 30, 20, 40}
+Output : 10 20 30 40
+
+
+7. Write a Java program to move all zero elements to the end of an array without changing the order of other elements.
+
+Example:
+Input  : {0, 10, 0, 20, 30, 0, 40}
+Output : 10 20 30 40 0 0 0
+
+
+PATTERN PROGRAMS
+================
+
+8. Write a Java program to print the following pattern.
+
+Output:
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+
+9. Write a Java program to print the following pattern.
+
+Output:
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+
+10. Write a Java program to print the following pattern.
+
+Output:
+
+    *
+   * *
+  * * *
+ * * * *
+* * * * *

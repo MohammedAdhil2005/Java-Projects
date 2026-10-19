@@ -1,0 +1,74 @@
+class a
+{
+	public a(){
+		System.out.println("this is a block!!!");
+	}
+}
+
+class b extends a 
+{
+	public b(){
+		System.out.println("this is b block!!!");
+	}
+}
+
+class c extends b
+{
+	public c(){
+		System.out.println("this is c block!!!");
+	}
+}
+
+
+class d extends a
+{
+	public d(){
+		System.out.println("this is d block!!!");
+	}
+}
+
+interface one
+{
+	public abstract void display1();
+}
+
+interface two
+{
+	public abstract void display2();
+}
+
+class multiple implements one, two
+{
+	public void display1(){
+		System.out.println("DISPLAY 1");
+	}
+	
+	public void display2(){
+		System.out.println("DISPLAY 2");
+	}
+}
+
+class Inheritance 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println(" ---- Single level ---- ");
+		b second=new b();	//single level inheritance
+		
+		System.out.println("\n ---- Multi level ---- ");
+		c third=new c();    //multi level inheritance
+		
+		System.out.println("\n ---- Hierarical  ---- ");
+		d fourth=new d();   //Hierarical inheritance
+		
+		System.out.println("\n ---- Hybrid  ---- ");
+		b single=new b();	//single level inheritance    //hybrid
+		System.out.println(" ------------------");
+		c multi=new c();    //multi level inheritance     //hybrid
+		
+		System.out.println("\n ---- Multiple Inheritance  ---- ");
+		multiple m=new multiple();
+		m.display1();
+		
+	}
+}

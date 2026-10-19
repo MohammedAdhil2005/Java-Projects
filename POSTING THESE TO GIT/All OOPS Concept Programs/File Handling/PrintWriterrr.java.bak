@@ -1,0 +1,22 @@
+import java.io.*;
+
+class PrintWriterrr 
+{
+	public static void main(String[] args) throws Exception
+	{
+		File f=new File("C:\\Users\\amoha\\OneDrive\\Desktop\\QSPIDERS JAVA\\All OOPS Concept Programs\\File Handling\\data.txt");
+		
+		PrintWriter pw=new PrintWriter(f);
+		
+		pw.print("Adhil");
+		pw.println(" A");
+		pw.print(10+" ");
+		pw.print(45.87+" ");
+		pw.print(true);
+		
+		
+		pw.flush();
+		
+		System.out.println("Doneee");
+	}
+}

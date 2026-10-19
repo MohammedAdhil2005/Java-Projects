@@ -1,0 +1,42 @@
+class string_1
+{
+    public static boolean start(String str, String substr)
+    {
+        if(str.length() < substr.length())
+        {
+            return false;
+        }
+		
+        else
+        {
+            for(int i = 0; i <= str.length() - substr.length(); i++)
+            {
+                boolean flag = true;
+
+                for(int j = 0; j < substr.length(); j++)
+                {
+                    if(str.charAt(i + j) != substr.charAt(j))
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+
+                if(flag)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public static void main(String[] args) 
+    {
+        String str = "Hello World";
+        String substr = "World";
+
+        System.out.println(start(str, substr));
+    }
+}

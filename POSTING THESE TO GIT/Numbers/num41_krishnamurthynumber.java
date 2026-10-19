@@ -1,0 +1,33 @@
+class num41_krishnamurthynumber 
+{
+	
+	public static int factorial(int n){
+	int fact=1;
+	for(int i=1;i<=n;i++){
+			fact=fact*i;
+		}
+		return fact;
+	}
+	public static void krish(int n){
+		int org=n;
+		int sum=0;
+		
+		while(n!=0){
+			int last=n%10;
+			sum=sum+factorial(last);
+			n=n/10;
+		}
+		
+		if(sum==org){
+		 System.out.println("its krishhhh num");
+		}
+		else {
+		System.out.println("notttt krishhhh num");	
+		}
+	}
+	public static void main(String[] args) 
+	{
+      int num =145;
+	  krish(num);
+	}
+}

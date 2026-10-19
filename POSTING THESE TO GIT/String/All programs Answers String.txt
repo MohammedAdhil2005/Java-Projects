@@ -1,0 +1,1175 @@
+class string_1
+{
+    public static boolean start(String str, String substr)
+    {
+        if(str.length() < substr.length())
+        {
+            return false;
+        }
+		
+        else
+        {
+            for(int i = 0; i <= str.length() - substr.length(); i++)
+            {
+                boolean flag = true;
+
+                for(int j = 0; j < substr.length(); j++)
+                {
+                    if(str.charAt(i + j) != substr.charAt(j))
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+
+                if(flag)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public static void main(String[] args) 
+    {
+        String str = "Hello World";
+        String substr = "World";
+
+        System.out.println(start(str, substr));
+    }
+}
+
+-------------------------------------------------------------------
+
+class string_2 
+{
+	public static void main(String[] args) 
+	{
+		
+    /*Question: Write a Java program to find and print the indexes 
+	            of all non-digit characters present in a given String.*/
+		
+		
+		String s="a1b2c34de";
+		
+		System.out.println("Chararcter indexes are: \n");
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch<'0' || ch>'9'){   // Ascii values is '0' ---> 48 and '9' ---> 57
+				System.out.println(i);
+			}
+		}
+		
+	}
+}
+
+
+----------------------------------------------------------------------
+
+class string_3 
+{
+	public static void main(String[] args) 
+	{
+		
+	/* Question: Write a Java program to find and print the indexes
+		         of all digit characters present in a given String.*/
+		   
+		   
+		String s="a1b2c345";
+		
+		System.out.println("Number indexes are: \n");
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch>='0' && ch<='9'){  // Ascii values is '0' ---> 48 and '9' ---> 57
+				System.out.println(i);
+			}
+		}
+		
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class string_4 
+{
+	public static void main(String[] args) 
+	{
+		
+	/* Question: Write a Java program to find and print the indexes of
+	             all vowel characters present in a given String.*/
+				 
+				 
+		String s="hello";
+		
+		System.out.println("The vowels in the give String indexes are: ");
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+				System.out.println(i);
+			}
+		}
+		
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class  string_5
+{
+	public static void main(String[] args) 
+	{
+		
+   /*Question: Write a Java program to find and print all the special characters present in a given String
+		       and also count the total number of special characters.*/
+			   
+			   
+		String s="I&Love&_Java";
+		
+		int count=0;
+		
+		System.out.print("The special characters are presented in --> ");
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(!(ch>='a' && ch<='z') && !(ch>='A' && ch<='Z') && !(ch>='0' && ch<='9')){
+				count++;
+				System.out.print(ch+" ");
+			}
+			
+		}
+		System.out.println(" Totally -- > "+count);
+		
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class string_6 
+{
+	
+  /*Question: Write a Java program to find and print the indexes of all digit characters present in a 
+              given String and also count the total number of digits.*/
+		
+			  
+	public static void number(String s,int count){
+		
+		System.out.print("\nthe index of the given numbers are --> ");
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch>='0' && ch<='9'){
+				System.out.print(i+", ");
+				count++;
+			}
+		}
+		
+		System.out.print("in "+count+" Positions!!!");
+		
+	}
+	
+	
+	
+  /*Question: Write a Java method to find and print the indexes of all non-digit characters (letters) present
+	            in a given String and also count the total number of such characters.*/
+				
+				
+				
+	public static void letter(String s,int count){
+		
+		System.out.print("\nthe index of the given Letters are --> ");
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch<'0' || ch>'9'){
+				System.out.print(i+", ");
+				count++;
+			}
+		}
+		
+		System.out.print("in "+count+" Positions!!!\n");
+		
+	}
+	
+	
+	
+	public static void main(String[] args) 
+	{
+		String s="a1b2c3d4";
+		int count=0;
+		
+		number(s,count);
+		letter(s,count);
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class string_7 
+{
+	public static void main(String[] args) 
+	{
+		
+		//PDF Question: Find First Occurrence of a Character
+		
+		String s="programming";
+		char target='g';
+		
+		System.out.println("\nFirst Occurence using predefined method --> "+s.indexOf(target)+"\n");
+				
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch==target){
+				System.out.println("First Occurence using Manual method --> "+i);
+				break;
+			}
+		}
+	}
+}
+
+
+
+--------------------------------------------------------------------------
+
+class string_8 
+{
+	public static void main(String[] args) 
+	{
+		
+		//PDF Question: Find Last Occurrence of a Character
+		
+		String s="programming";
+		char target='g';
+		
+		System.out.println("\nLast Occurence using predefined method --> "+s.lastIndexOf(target)+"\n");
+		
+		for(int i=s.length()-1;i>=0;i--){
+			
+			char ch=s.charAt(i);
+			
+			if(ch==target){
+				System.out.println("Last Occurence using Manual method --> "+i);
+				break;
+			}
+		}
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+
+class string_9 
+{
+	public static void main(String[] args) 
+	{
+		
+		// PDF Question: 3. Search a Character Without Using indexOf()
+		//               4. Search a Character Without Using indexOf() (Not Present)
+		
+		
+        String s = "Programming";
+        char target = 'o';
+
+        boolean found =false;
+
+        for(int i=0; i<s.length(); i++)
+        {
+            char ch = s.charAt(i);
+
+            if(ch==target)
+            {
+                System.out.println("Found at index --> " + i);
+                found = true;
+                break;
+            }
+        }
+
+        if(!found)
+        {
+            System.out.println("Not Found");
+        }
+		
+	}
+}
+
+
+
+--------------------------------------------------------------------------
+
+
+class string_10 
+{
+	public static void main(String[] args) 
+	{
+		// PDF Question: Search a Substring and its start index
+		
+		String str="Helle World";
+		String substr="World";
+		
+		boolean res=false;
+		
+		
+		if(str.length()<substr.length()){
+			res=false;
+		}
+		
+		else{
+		   for(int i=0;i<=str.length()-substr.length();i++){
+			   
+			res=true;
+			
+			for(int j=0;j<substr.length();j++){
+				
+				if(str.charAt(i+j)!=substr.charAt(j)){
+					res=false;
+					break;
+				}
+			}
+			
+			if(res){
+				System.out.println("YES WE HAVE");
+				System.out.println("Starting index = " + i);
+                break;
+			}
+			
+		   }
+		}
+		
+		if(!res){
+			System.out.println("NOT FOUND");
+		}
+		
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class string_11 
+{
+	public static void main(String[] args) 
+	{
+		// PDF Question: Count Occurrence of a Character
+		
+		String s="banana";
+		char target='a';
+		
+		int count =0;
+		
+		for(int i=0;i<s.length();i++){
+			
+			if(s.charAt(i)==target){
+				count++;
+			}
+		}
+		
+		System.out.println(target+" --> yepp it occured --> "+count);
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class  string_12
+{
+	public static void main(String[] args) 
+	{
+		
+		// Question: Count Occurrence of a Word
+		
+		String str="the cat sat	on the mat the cat ran";
+		String substr="thee";
+		
+		boolean flag=false;
+		
+		int count=0;
+		
+		if(str.length()<substr.length()){
+			flag=false;
+		}
+		else{
+		    for(int i=0;i<=str.length()-substr.length();i++){
+			   
+			   flag=true;
+			   
+			   for(int j=0;j<substr.length();j++){
+				   
+				  if(str.charAt(i+j)!=substr.charAt(j)){
+					  
+					 flag=false;
+					 break;
+				  }
+			   }
+			   
+			   if(flag){
+                   count++;
+		       }
+			   
+		    }
+		}
+		
+		System.out.println("Ouccured "+count+" times!!");
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class string_13 
+{
+	public static void main(String[] args) 
+	{
+		// Question: Find All Positions	of a Character
+		
+		String s="banana";
+		char target='a';
+		
+		for(int i=0;i<s.length();i++){
+			char ch=s.charAt(i);
+			
+			if(ch==target){
+				System.out.println(target+" present in --> "+i);
+			}
+		}
+		
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class  string_14
+{
+	public static void main(String[] args) 
+	{
+		/// Question: Check whether a string starts with a 
+		//            given prefix using startsWith()
+		
+		
+		String s="Hello world";
+		String target="Hello";
+				
+		System.out.println(s.startsWith(target));
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class  string_15
+{
+	public static void main(String[] args) 
+	{
+		
+		// Question: Check whether a string ends
+		//           with a given suffix endsWith()
+		
+		String s="Hello World";
+		String target="World";
+		
+		System.out.println(s.endsWith(target));
+	}
+}
+
+--------------------------------------------------------------------------
+
+class string_16 
+{
+	public static void main(String[] args) 
+	{
+		// Question: Check whether a string contains a 
+		//           given substring anywhere within it using contains();
+		
+		String s="the quick brown fox";
+		String target="fox";
+		
+		System.out.println(s.contains(target));
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class string_17 
+{
+	public static void main(String[] args) 
+	{
+		//Question : Find Index of Every Vowel
+		
+		String s="adhil";
+		
+		System.out.println("Indexes are ---> ");
+		
+		for(int i=0;i<s.length();i++){
+			char ch=s.charAt(i);
+			
+			if(ch=='a'|| ch=='e'|| ch=='i'|| ch=='o'|| ch=='u'){
+				System.out.println(i);
+			}
+		}
+		
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class string_18 
+{
+	public static void main(String[] args) 
+	{
+		// Question: Find Index of Every Digit
+		
+		String s="a1b2c3d4e656";
+		
+		System.out.println("Indexes of digits are  ---> ");
+		
+		for(int i=0;i<s.length();i++){
+			char ch=s.charAt(i);
+			
+			if(ch>='0' && ch<='9'){
+				System.out.println(i);
+			}
+		}
+		
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class  string_19
+{
+	public static void main(String[] args) 
+	{
+		// Question: Count Uppercase Letters
+         
+		String s="Adhil";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch>='A' && ch<='Z'){
+				count++;
+			}
+		}
+		System.out.println("\nUppercase letter count are --> "+count);
+	}
+}
+
+--------------------------------------------------------------------------
+
+class string_20 
+{
+	public static void main(String[] args) 
+	{
+		// Question: Count Lowercase Letters
+         
+		String s="Adhil";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch>='a' && ch<='z'){
+				count++;
+			}
+		}
+		System.out.println("\nLowercase letter count are --> "+count);
+	}
+}
+
+
+
+--------------------------------------------------------------------------
+
+class  string_21
+{
+	public static void main(String[] args) 
+	{
+		// Question: Count the number of digit characters in a string.
+		
+        String s="a1b2c3d4";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			char ch=s.charAt(i);
+			
+			if(ch>='0' && ch<='9'){
+				count++;
+			}
+		}
+		System.out.println("Digit counts are --> "+count);
+	}
+}
+
+--------------------------------------------------------------------------
+
+class  string_22
+{
+	public static void main(String[] args) 
+	{
+		// Question: Count the number of vowel characters in a string.
+		
+        String s="a1b2c3d4";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			char ch=s.charAt(i);
+			
+			if(ch=='a'|| ch=='e'|| ch=='i'|| ch=='o'|| ch=='u'){
+				count++;
+			}
+		}
+		System.out.println("Vowel counts are --> "+count);
+	}
+}
+ 
+
+
+--------------------------------------------------------------------------
+
+class string_23 
+{
+	public static void main(String[] args) 
+	{
+		// Question: Count the number of consonants in a string.
+        
+		String s="adhil";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch!='a'&& ch!='e'&& ch!='i'&& ch!='o'&& ch!='u'){
+				count++;
+			}
+		}
+		System.out.println("Consonants counts are --> "+count);
+	}
+}
+
+--------------------------------------------------------------------------
+
+class string_24 
+{
+	public static void main(String[] args) 
+	{
+		// Question: Count the number of space characters in a string
+		
+		String s="the sky is blue";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			char ch=s.charAt(i);
+			
+			if(ch==' '){
+				count++;
+			}
+		}
+		System.out.println("Spaces count are --> "+count);
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class  string_25
+{
+	public static void main(String[] args) 
+	{
+		// Question: Count Special Characters
+		
+		String s="I@LOVE*JAVA";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(!(ch>='a' && ch<='z') && !(ch>='A' && ch<='Z') && !(ch>='0' && ch<='9')){
+				count++;
+			}
+		}
+		System.out.println("Special char count are ---> "+count);
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class string_26 
+{
+	public static void main(String[] args) 
+	{
+		// Question: Count the number of words in a sentence.
+		
+		String s="Java is a powerful language";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch!=' ' && (i==0 || s.charAt(i-1)==' ')){
+				count++;
+			}
+		}
+		System.out.println("Words count are --> "+count);
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class string_27 
+{
+	public static void main(String[] args) 
+	{
+		// Question: Count the number of alphabetic characters (a–z, A–Z) in a string.
+
+        String s="Adhil 221";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')){
+				count++;
+			}
+		}
+		System.out.println("count of the alphabets --> "+count);
+	}
+}
+
+--------------------------------------------------------------------------
+
+class string_28 
+{
+	public static void main(String[] args) 
+	{
+		//Question: Count the number of numeric (digit) characters in a string.
+
+        String s="a1b2c3$#";
+		int count=0;
+		
+		for(int i=0;i<s.length();i++){
+			
+			char ch=s.charAt(i);
+			
+			if(ch>='0' && ch<='9'){
+				count++;
+			}
+		}
+		System.out.println("number counts are --> "+count);
+	}
+}
+
+--------------------------------------------------------------------------
+class string_29 
+{
+	public static void main(String[] args) 
+	{
+		// Question: Display the frequency count of every distinct character in a string.
+		
+		String s="banana";
+		
+		for(int i=0;i<s.length();i++){
+			char ch=s.charAt(i);
+			int freq=0;
+			
+			
+			for(int j=0;j<s.length();j++){
+				
+				if(ch==s.charAt(j)){
+				      freq++;
+			    }
+			}
+			
+			if(s.indexOf(ch)==i){
+			    System.out.println(ch + " --> " + freq);
+		    }
+			
+		}	
+	}
+}
+
+--------------------------------------------------------------------------
+class string_30
+{
+	public static void main(String[] args) 
+	{
+		// Question: Display the frequency count of every distinct word in a sentence.
+		
+		String s="cat dog cat bird dog cat";
+		
+		String[] words=s.split(" ");
+		
+		for(int i=0;i<words.length;i++){
+			
+			String word=words[i];
+			int freq=0;
+			
+			
+			for(int j=0;j<words.length;j++){
+				
+				if(word.equals(words[j])){
+					freq++;
+				}
+			}
+			
+			
+			boolean first=true;
+			
+			for(int k=0;k<i;k++){
+				
+				if(word.equals(words[k])){
+					first=false;
+					break;
+				}
+			}
+			
+			
+			if(first){
+				System.out.println(word+" --> "+freq);
+			}
+		}
+	}
+}
+--------------------------------------------------------------------------
+
+class string25_count13 
+{
+	public static void main(String[] args) 
+	{
+		String s="hello there.how are you ? iam fine!";
+		int count=0;
+		for (int i=0;i<s.length();i++ )
+		{
+			char ch=s.charAt(i);
+			if (ch=='!' || ch=='?' || ch=='.')
+			{
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+}
+
+
+--------------------------------------------------------------------------
+class string26_count14 
+{
+	public static void main(String[] args) 
+	{
+		String s="hello, realy.how are you ? iam fine!";
+		int count=0;
+		for (int i=0;i<s.length();i++ )
+		{
+			char ch=s.charAt(i);
+			if (ch=='!' || ch=='?' || ch=='.' || ch==',' ||ch==';' || ch==':')
+			{
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+}
+
+--------------------------------------------------------------------------
+class string27_count15 
+{
+	public static void main(String[] args) 
+	{
+		String s="hello1234!@#";
+		int letters=0;
+		int digits=0;
+		int splchar=0;
+		
+		for (int i=0;i<s.length() ;i++ )
+		{
+			char ch=s.charAt(i);
+			if ((ch>='a' && ch<='z')||(ch>='a' && ch<='z'))
+			{
+				letters++;
+			}
+			else if (ch>='0' && ch<='9')
+			{
+				digits++;
+			}
+			else{
+				splchar++;
+			}
+		}
+		System.out.println("letters = "+letters);
+		System.out.println("digits = "+digits);
+		System.out.println("splchar = "+splchar);
+	}
+}
+
+--------------------------------------------------------------------------
+class string28_count16 
+{
+	public static void main(String[] args) 
+	{
+		String s="hello world java";
+		String result="";
+		
+		for (int i=0;i<s.length() ;i++ )
+		{
+			char ch=s.charAt(i);
+			if (ch != ' ')
+			{
+				result =result+ch;
+			}
+		}
+		System.out.println(result);
+	}
+}
+
+--------------------------------------------------------------------------
+class string29_count17
+{
+	public static void main(String[] args) 
+	{
+		String s="a1b2c3d4";
+		int count =0;
+		
+		
+		for (int i=0;i<s.length() ;i++ )
+		{
+			char ch=s.charAt(i);
+			if (ch>='0' && ch <='9')
+			{
+				int n=ch;
+				if (n%2==0)
+				{
+					count++;
+				}
+			}
+		}
+		System.out.println(count);
+	}
+}
+
+--------------------------------------------------------------------------
+class string30_count18
+{
+	public static void main(String[] args) 
+	{
+		String s="a1b2c3d4";
+		int count =0;
+		
+		
+		for (int i=0;i<s.length() ;i++ )
+		{
+			char ch=s.charAt(i);
+			if (ch>='0' && ch <='9')
+			{
+				int n=ch;
+				if (n%2!=0)
+				{
+					count++;
+				}
+			}
+		}
+		System.out.println(count);
+	}
+}
+
+--------------------------------------------------------------------------
+class string31_count19
+{
+	public static void main(String[] args) 
+	{
+		String s="banana";
+		for (int i=0;i<s.length() ;i++ )
+		{
+			char ch=s.charAt(i);
+			boolean already_counted=false;
+			
+			//to chech already counted or not
+			for (int j=0;j<i ;j++ )
+			{
+				if (s.charAt(j)==ch)
+				{
+					already_counted=true;
+					break;
+				}
+			}
+			//if not count lets count
+			if (already_counted==false)
+			{
+			int count=0;
+			for (int j=0;j<s.length() ;j++ )
+			{
+				
+				if (s.charAt(j)==ch)
+				{
+					count++;
+				}
+			}
+			if (count>1)
+			{
+			
+			System.out.println("count of"+ch+" is ="+count);
+			}
+			}
+		}
+	}
+}
+
+--------------------------------------------------------------------------
+class string32_revstr 
+{
+	public static void main(String[] args) 
+	{
+		String s="manoj";
+		String result="";
+		
+		for (int i=s.length()-1;i>=0 ;i--)
+		{
+			char ch=s.charAt(i);
+			result=result+ch;
+		}
+		System.out.println(result);
+	}
+}
+
+--------------------------------------------------------------------------
+class string33_count20 
+{
+	public static void main(String[] args) 
+	{
+		String s="an apple is an orange";
+		String[] a=s.split(" ");
+		int count=0;
+		
+		for (int i=0;i<a.length ;i++ )
+		{
+			char ch=a[i].charAt(0);
+			if (ch=='a' ||ch=='e' || ch=='i' ||ch=='o'||ch=='u' )
+			{
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+}
+
+--------------------------------------------------------------------------
+class string34_count21 
+{
+	public static void main(String[] args) 
+	{
+		String s="an apple is ou njci";
+		String[] a=s.split(" ");
+		int count=0;
+		
+		for (int i=0;i<a.length ;i++ )
+		{
+			char ch=a[i].charAt(a[i].length()-1);
+			if (ch=='a' || ch=='i' || ch=='e' || ch=='o' || ch=='u')
+			{
+				count++;
+			}
+		}
+		System.out.println(count);
+		
+	}
+}
+
+--------------------------------------------------------------------------
+class string35_count22 
+{
+	public static void main(String[] args) 
+	{
+		String s="i love java programming";
+		String[] a=s.split(" ");
+		
+		int count=0;
+		
+		for (int i=0;i<a.length ;i++ )
+		{
+			if (a[i].length()>5)
+			{
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+}
+
+--------------------------------------------------------------------------
+
+class string36_count23
+{
+	public static void main(String[] args) 
+	{
+		String s="i love java programming";
+		String[] a=s.split(" ");
+		
+		int count=0;
+		
+		for (int i=0;i<a.length ;i++ )
+		{
+			if (a[i].length()==1)
+			{
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+class string37_count24
+{
+	public static void main(String[] args) 
+	{
+		String s="ilove\njava\nprogramming";
+		
+		
+		int count=1;
+		
+		for (int i=0;i<s.length() ;i++ )
+		{
+			char ch=s.charAt(i);
+			if (ch=='\n')
+			{
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+}

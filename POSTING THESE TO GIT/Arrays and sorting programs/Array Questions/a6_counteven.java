@@ -1,0 +1,22 @@
+class a6_counteven 
+{
+	
+	public static void ec(int[] a){
+		int ec=0;
+		
+		for(int i=1;i<a.length;i++){
+			if(a[i]%2==0){
+				ec++;
+			}
+		}
+		
+		System.out.println("Even count is ----> "+ec);
+	}
+	
+	public static void main(String[] args) 
+	{
+		int[] a={7,3,1,10,4,8};
+		ec(a);
+		
+	}
+}

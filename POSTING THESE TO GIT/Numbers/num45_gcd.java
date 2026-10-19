@@ -1,0 +1,21 @@
+class num45_gcd 
+{
+	public static void gcd(int a,int b){
+		int min=(a<b)?a:b;
+		int gcd=1;
+		
+		for(int i=1;i<=min;i++){
+			if(a%i==0 && b%i==0){
+				gcd=i;
+			}
+		}
+		System.out.println("GCD ----> "+gcd);
+	}
+	public static void main(String[] args) 
+	{
+		int a=12;
+		int b=18;
+		
+		gcd(a,b);
+	}
+}

@@ -1,0 +1,13 @@
+import java.util.function.*;
+
+class  p4_ReturnrandomNumber
+{
+	public static void main(String[] args) 
+	{
+		Supplier<Integer> s=()->
+		{
+			return (int)(Math.random());
+		};
+		System.out.println(s.get());
+	}
+}

@@ -1,0 +1,38 @@
+import java.io.*;
+
+class student implements Serializable
+{
+    int id;
+    String name;
+    int age;
+
+    student(int id, String name, int age)
+    {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    public String toString()
+    {
+        return name + " " + id + " " + age;
+    }
+}
+
+class Deserializableee
+{
+    public static void main(String[] args) throws Exception
+    {
+		File f=new File("C:\Users\amoha\OneDrive\Desktop\QSPIDERS JAVA\All OOPS Concept Programs\File Handling\\data_1.txt");
+
+        FileInputStream fis = new FileInputStream(f);
+
+        ObjectInputStream ois = new ObjectInputStream(fis);
+
+        student s2 = (student) ois.readObject();
+
+        System.out.println(s2);
+
+        ois.close();
+    }
+}

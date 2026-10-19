@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+class a53_leftrotatebyKtimes 
+{
+	public static void main(String[] args) 
+	{
+		
+		Scanner sc=new Scanner(System.in);
+		
+		int[] a={10,20,30};
+		
+		System.out.println("\nBefore rotation --> "+Arrays.toString(a));
+		
+		System.out.print("\nEnter how many you want to left rotate ---> ");
+		int k=2;; 
+		
+		for(int i=1;i<=k;i++){
+			
+			int temp=a[0];
+			
+			for(int j=0;j<a.length-1;j++){
+				a[j]=a[j+1];
+			}
+			
+			a[a.length-1]=temp;
+		}
+		
+		System.out.println("\nAfter left rotaion by k times --> "+Arrays.toString(a));
+	}
+}

@@ -1,0 +1,20 @@
+import java.util.function.*;
+
+class p4_Divisibleby5
+{
+	public static void main(String[] args) 
+	{
+		Predicate<Integer> p=(n)->{
+			if(n%5==0){
+				System.out.println("DIVIDED !!!!");
+				return true;
+			}
+			else{
+				System.out.println("NOT DIVIDED !!!!");
+				return false;
+			}
+		};
+		
+		System.out.println("OUTPUT IS ---> "+p.test(5));
+	}
+}

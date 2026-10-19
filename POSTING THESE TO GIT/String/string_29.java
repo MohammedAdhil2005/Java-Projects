@@ -1,0 +1,27 @@
+class string_29 
+{
+	public static void main(String[] args) 
+	{
+		// Question: Display the frequency count of every distinct character in a string.
+		
+		String s="banana";
+		
+		for(int i=0;i<s.length();i++){
+			char ch=s.charAt(i);
+			int freq=0;
+			
+			
+			for(int j=0;j<s.length();j++){
+				
+				if(ch==s.charAt(j)){
+				      freq++;
+			    }
+			}
+			
+			if(s.indexOf(ch)==i){
+			    System.out.println(ch + " --> " + freq);
+		    }
+			
+		}	
+	}
+}

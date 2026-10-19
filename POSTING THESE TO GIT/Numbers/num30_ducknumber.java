@@ -1,0 +1,32 @@
+class  num30_ducknumber
+{
+	public static boolean duck(int n){
+	
+		boolean duck=false;
+		
+		while(n!=0){
+			
+			int last=n%10;
+			
+			if(last==0){
+				duck=true;
+				break;
+			}
+			
+			n=n/10;
+			
+		}
+		return duck;
+	}
+	public static void main(String[] args) 
+	{
+		int num=1023;
+		boolean res=duck(num);
+		if(res){
+		System.out.println("Duck");
+		}
+		else{
+		System.out.println("not Duck");
+		}
+	}
+}

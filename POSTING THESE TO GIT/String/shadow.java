@@ -1,0 +1,28 @@
+class a
+{
+	public void a1(){
+		System.out.println("this is first class");
+	}
+}
+
+class b extends a
+{
+	public void a1(){
+		System.out.println("this is second class");
+	}
+}
+
+
+class shadow 
+{
+	public static void main(String[] args) 
+	{
+		
+		b second=new b();
+		second.a1();
+		
+		a first=new a();
+		first.a1();
+	
+	}
+}

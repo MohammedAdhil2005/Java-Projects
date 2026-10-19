@@ -1,0 +1,11 @@
+class dingifamily{
+	
+	public static void main(String[] args) {
+		
+		dingiheart d=new dingiheart();
+		System.out.println("Boy friend name is ---> "+d.friend());
+		
+		String mapla="Tingiii";
+		d.setnewboy(mapla);
+	}
+}

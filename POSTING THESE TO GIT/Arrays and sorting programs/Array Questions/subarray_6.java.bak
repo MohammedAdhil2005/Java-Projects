@@ -1,0 +1,47 @@
+class subarray_6 
+{
+	public static void main(String[] args) 
+	{
+		int[] a={1,2,3};
+		int max=Integer.MIN_VALUE;
+		
+		int start=0,end=0;
+		
+		for(int i=0;i<a.length;i++){
+			
+			int sum=0;
+			
+			for(int j=i;j<a.length;j++){
+				
+				for(int k=i;k<=j;k++){
+					System.out.print(a[k]+" ");
+				}
+				
+				sum=sum+a[j];
+				System.out.println(" ---> "+sum);
+				
+				if(sum>max){
+					max=sum;
+					start=i;
+					end=j;
+				}
+				
+			}
+			
+			System.out.println("------------");
+		}
+		
+		System.out.println("\nThe maximum subarray is "+max);
+		
+		System.out.print("\nMaximum Sum Subarray = ");
+		
+        for (int i = start; i <= end; i++) {
+			
+            System.out.print(a[i] + " ");
+			
+        }
+		
+		System.out.println();
+		
+	}
+}

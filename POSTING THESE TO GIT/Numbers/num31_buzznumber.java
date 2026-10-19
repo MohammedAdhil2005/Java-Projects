@@ -1,0 +1,19 @@
+class num31_buzznumber 
+{
+	public static void buzz(int n){
+		int end=n%10;
+		
+		if(end==7 || n%7==0){
+			System.out.println("Buzz");
+		}
+		else{
+			System.out.println("Not buzz");
+		}
+	}
+	
+	public static void main(String[] args) 
+	{
+		int num=14;
+		buzz(num);
+	}
+}

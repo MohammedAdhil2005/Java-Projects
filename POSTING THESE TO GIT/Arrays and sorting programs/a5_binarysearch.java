@@ -1,0 +1,74 @@
+import java.util.Scanner;
+class  a8_binarysearch
+{
+	static Scanner sc=new Scanner(System.in);
+	
+	public static void addelement(int[] a){
+		System.out.println("\n-------- Enter the Elements to add it in array -------- ");
+		for(int i=0;i<a.length;i++){
+			System.out.print("\n"+(i+1)+". value ------> ");
+			a[i]=sc.nextInt();
+		}
+	}
+	
+	public static void sortarray(int[] a){
+		
+		for(int i=0;i<a.length;i++){
+			for(int j=0;j<a.length-1-i;j++){     //or using Array.sort(a); it is simple 
+				if(a[j]>a[j+1]){
+					int temp=a[j];
+					a[j]=a[j+1];
+					a[j+1]=temp;
+				}
+			}
+		}
+	}
+	
+	public static boolean binary(int[] a,int target){
+		int left=0;
+		int right=a.length-1;
+		
+		while(left<=right){
+			int mid=(left+right)/2;
+			
+			if(target==a[mid]){
+				return true;
+				
+			}
+			else if(target<a[mid]){
+				right=mid-1;
+			}
+			else{
+				left=mid+1;
+			}
+		}
+		
+		return false;
+		
+	}
+	
+	public static void main(String[] args) 
+	{
+		System.out.print("\nEnter the size of an array ------> ");
+		int size=sc.nextInt();
+		
+		int[] a=new int[size];
+		addelement(a);
+		
+		sortarray(a);
+		
+		System.out.print("\nEnter the target value ------> ");
+		int target=sc.nextInt();
+		
+		boolean res=binary(a,target);
+		
+		if(res){
+			System.out.println("\nFounded");
+		}
+		else{
+			System.out.println("\nNot Founded");
+		}
+		
+		
+	}
+}

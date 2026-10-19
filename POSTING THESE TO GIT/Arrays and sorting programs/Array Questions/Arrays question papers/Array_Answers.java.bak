@@ -1,0 +1,950 @@
+import java.util.Arrays;
+class Array_Answers 
+{
+	//----------------------ONE-----------------------------
+	
+	public static void printread(int[] a){
+		System.out.print("\n\nThe given array is --->  ");
+		
+		for(int i=0;i<a.length;i++){
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println("\n\n------------------------- ");
+	}
+	
+	
+	//-----------------------TWO----------------------------
+	
+	
+	public static void sum(int[] a){
+		
+		int sum=0;
+		
+		for(int i=0;i<a.length;i++){
+			sum=sum+a[i];
+		}
+		
+		System.out.println("\nSum of the given array is ---> "+sum);
+		System.out.println("\n------------------------- ");
+	}
+	
+	
+	//---------------------THREE------------------------------
+	
+	
+	public static void avg(int[] a){
+		
+		int sum=0;
+		
+		for(int i=0;i<a.length;i++){
+			sum=sum+a[i];
+		}
+		
+		int avg=sum/a.length;
+		
+		System.out.println("\nAvg of the given array is ---> "+avg);
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//---------------------FOUR------------------------------
+		
+	
+	public static void max(int[] a){
+		
+		int max=Integer.MIN_VALUE;
+		
+		for(int i=0;i<a.length;i++){
+			if(max<a[i]){
+				max=a[i];
+			}
+		}
+		
+		System.out.println("\nMax of the given array is ---> "+max);
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//---------------------FIVE------------------------------
+	
+	
+	public static void min(int[] a){
+		
+		int min=Integer.MAX_VALUE;
+		
+		for(int i=0;i<a.length;i++){
+			if(min>a[i]){
+				min=a[i];
+			}
+		}
+		
+		System.out.println("\nMin of the given array is ---> "+min);
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//-----------------------SIX----------------------------
+		
+	
+	public static void counteven(int[] a){
+		
+		int count=0;
+		
+		for(int i=0;i<a.length;i++){
+			if(a[i]%2==0){
+				count++;
+			}
+		}
+		
+		System.out.println("\nCount Even number in the given array is ---> "+count);
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//-----------------------SEVEN----------------------------
+		
+	
+	public static void countodd(int[] a){
+		
+		int count=0;
+		
+		for(int i=0;i<a.length;i++){
+			if(a[i]%2!=0){
+				count++;
+			}
+		}
+		
+		System.out.println("\nCount Odd number in the given array is ---> "+count);
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------EIGHT-----------------------------
+		
+	
+	public static void countpositivenum(int[] a){
+		
+		int count=0;
+		
+		for(int i=0;i<a.length;i++){
+			if(a[i]>0){
+				count++;
+			}
+		}
+		
+		System.out.println("\nCount positive number in the given array is ---> "+count);
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//-----------------------NINE----------------------------
+		
+	
+	public static void countnegativenum(int[] a){
+		
+		int count=0;
+		
+		for(int i=0;i<a.length;i++){
+			if(a[i]<0){
+				count++;
+			}
+		}
+		
+		System.out.println("\nCount negative number in the given array is ---> "+count);
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//------------------------TEN---------------------------
+		
+	
+	public static void revarray(int[] a){
+		
+		int[] rev =new int[a.length];
+		int last=a.length-1;
+		
+		for(int i=0;i<a.length;i++){
+			rev[last]=a[i];
+			last--;
+		}
+		
+        System.out.println("\nReverse the given array is ---> "+Arrays.toString(rev));
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//-----------------------ELEVEN----------------------------
+		
+	
+	public static void copyarray(int[] a){
+		
+		int[] copy=new int[a.length];
+		
+		for(int i=0;i<a.length;i++){
+			copy[i]=a[i];
+		}
+		
+        System.out.println("\nCopy this given array to another array is ---> "+Arrays.toString(copy));
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//------------------------TWELVE---------------------------
+		
+	
+	public static void printalternate(int[] a){
+		
+		System.out.print("\nThe alternate Elements of the given array is --->  ");
+		for(int i=0;i<a.length;i+=2){
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println("\n\n------------------------- ");
+	}
+	
+	
+	//------------------------THIRTEEN---------------------------
+		
+	
+	public static void printfirsthalf(int[] a){
+		
+		System.out.print("\nThe first half of the given array is --->  ");
+		
+		for(int i=0;i<a.length/2;i++){
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println("\n\n------------------------- ");
+		
+	}
+	
+	
+	//-------------------------FOURTEEN--------------------------
+	
+	
+	public static void printsecondhalf(int[] a){
+		
+		System.out.print("\nThe second half of the given array is --->  ");
+		
+		for(int i=a.length/2;i<a.length;i++){
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println("\n\n------------------------- ");
+	}
+	
+	
+	//------------------------FIFTEEN---------------------------
+	
+	
+	public static void findarraylength(int[] a){
+		
+		System.out.println("\nThe length of the given array is ----> "+(a.length-1));
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//-----------------------SIXTEEN----------------------------
+	
+	
+	public static void secondmax(int[] a){
+		int firstmax=Integer.MIN_VALUE;
+		int secondmax=Integer.MIN_VALUE;
+		
+		for(int i=0;i<a.length;i++){
+			if(firstmax<a[i]){
+				secondmax=firstmax;
+				firstmax=a[i];
+			}
+			else if(secondmax<a[i] && a[i]!=firstmax){
+				secondmax=a[i];
+			}
+		}
+		
+		System.out.println("\nSecond max of the given array is ---> "+secondmax);
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//-----------------------SEVENTEEN----------------------------
+	
+	
+	public static void secondmin(int[] a){
+		int firstmin=Integer.MAX_VALUE;
+		int secondmin=Integer.MAX_VALUE;
+		
+		for(int i=0;i<a.length;i++){
+			if(firstmin>a[i]){
+				secondmin=firstmin;
+				firstmin=a[i];
+			}
+			else if(secondmin>a[i] && a[i]!=firstmin){
+				secondmin=a[i];
+			}
+		}
+		
+		System.out.println("\nSecond min of the given array is ---> "+secondmin);
+		System.out.println("\n------------------------- ");
+	}
+	
+	
+	//----------------------EIGHTTEEN-----------------------------
+	
+	
+	public static void thirdmax(int[] a){
+		int firstmax=Integer.MIN_VALUE;
+		int secondmax=Integer.MIN_VALUE;
+		int thirdmax=Integer.MIN_VALUE;
+		
+		for(int i=0;i<a.length;i++){
+			if(firstmax<a[i]){
+				thirdmax=secondmax;
+				secondmax=firstmax;
+				firstmax=a[i];
+			}
+			
+			else if(secondmax<a[i] && a[i]!=firstmax){
+				thirdmax=secondmax;
+				secondmax=a[i];
+			}
+			
+			else if(thirdmax<a[i] && a[i]!=secondmax && a[i]!=firstmax){
+				thirdmax=a[i];
+			}
+		}
+		
+		System.out.println("\nThird max of the given array is ---> "+thirdmax);
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------NINETEEN-----------------------------
+	
+	
+	public static void thirdmin(int[] a){
+		int firstmin=Integer.MAX_VALUE;
+		int secondmin=Integer.MAX_VALUE;
+		int thirdmin=Integer.MAX_VALUE;
+		
+		for(int i=0;i<a.length;i++){
+			if(firstmin>a[i]){
+				thirdmin=secondmin;
+				secondmin=firstmin;
+				firstmin=a[i];
+			}
+			
+			else if(secondmin>a[i] && a[i]!=firstmin){
+				thirdmin=secondmin;
+				secondmin=a[i];
+			}
+			
+			else if(thirdmin>a[i] && a[i]!=firstmin && a[i]!=secondmin){
+				thirdmin=a[i];
+			}
+		}
+		
+		System.out.println("\nThird min of the given array is ---> "+thirdmin);
+		System.out.println("\n------------------------- ");
+	}
+	
+	
+	//----------------------TWENTY-----------------------------
+	
+	
+	public static void swap(int[] a){
+		int[] aclone=a.clone();
+		
+		int temp=aclone[0];
+		aclone[0]=aclone[a.length-1];
+		aclone[a.length-1]=temp;
+		
+		System.out.println("\nSwapped array is ---> "+Arrays.toString(aclone));
+		System.out.println("\n------------------------- ");
+		
+		
+	}
+	
+	
+	//----------------------TWENTYONE-----------------------------
+	
+	
+	public static void linearsearch(int[] a){
+		
+		int target=10;
+		boolean ispresent=false;
+		
+		System.out.println("\nLinear search --->  ");
+		for(int i=0;i<a.length;i++){
+			if(a[i]==target){
+				ispresent=true;
+			}
+		}
+		
+		if(ispresent){
+			System.out.println("\nYes we have this number ---> "+target);
+		}
+		else{
+			System.out.println("\nNope didn't have this number ---> "+target);
+		}
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------TWENTYTWO-----------------------------
+	
+	
+	public static void binarysearch(int[] a){
+		
+		int[] sorted=a.clone();
+		Arrays.sort(sorted);
+		
+		int target=10;
+		int left=0;
+		int right=a.length-1;
+		
+		boolean ispresent=false;
+		
+		System.out.println("\nBinary search --->  ");
+		for(int i=0;i<a.length;i++){
+			int mid=(left+right)/2;
+			
+			if(a[mid]==target){
+				ispresent=true;
+				break;
+			}
+			else if(a[mid]<target){
+				left=mid+1;
+			}
+			else{
+				right=mid-1;
+			}
+		}
+		
+		if(ispresent){
+			System.out.println("\nYes we have this number ---> "+target);
+		}
+		else{
+			System.out.println("\nNope didn't have this number ---> "+target);
+		}
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------TWENTYTHREE-----------------------------
+	
+	
+	public static void multipleoccurence(int[] a){
+		boolean[] visit=new boolean[a.length];
+		
+		System.out.println("\nMultiple occurences --->  \n");
+		for(int i=0;i<a.length;i++){
+			
+			if(visit[i]){
+				continue;
+			}
+			
+			int count=1;
+			
+			for(int j=i+1;j<a.length;j++){
+				
+				if(a[i]==a[j]){
+					visit[j]=true;
+					count++;
+				}
+			}
+			
+			if(count>1){
+				System.out.println(a[i]+" repeated "+count+" times !!!");
+			}
+		}
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------TWENTYFOUR-----------------------------
+	
+	
+	public static void countoccurences(int[] a){
+		boolean[] visit=new boolean[a.length];
+		
+		System.out.println("\nCount occurences of ---> \n");
+		
+		for(int i=0;i<a.length;i++){
+			
+			if(visit[i]){
+				continue;
+			}
+			
+			int count=1;
+			
+			for(int j=i+1;j<a.length;j++){
+				
+				if(a[i]==a[j]){
+					visit[j]=true;
+					count++;
+				}
+			}
+			
+			System.out.println(a[i]+" repeated "+count+" times !!!");
+		}
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//-----------------------TWENTYFIVE----------------------------
+	
+	
+	public static void firstoccurence(int[] a){
+		boolean[] visit=new boolean[a.length];
+		
+		System.out.println("\nFirst occurence --->  \n");
+		
+		for(int i=0;i<a.length;i++){
+			if(visit[i]){
+				continue;
+			}
+			
+			
+			System.out.println(a[i]+" occured "+i+" position !!!");
+			
+			for(int j=i+1;j<a.length;j++){
+				if(a[i]==a[j]){
+					visit[j]=true;
+				}
+			}			
+		}
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------TWENTYSIX-----------------------------
+	
+	
+	public static void lastoccurence(int[] a){
+		boolean[] visit=new boolean[a.length];
+		
+		System.out.println("Last occurence --->  \n");
+		for(int i=0;i<a.length;i++){
+			if(visit[i]){
+				continue;
+			}
+			
+			int lastindex=i;
+			
+			for(int j=i+1;j<a.length;j++){
+				if(a[i]==a[j]){
+					lastindex=j;
+					visit[j]=true;
+				}
+			}
+			
+			System.out.println(a[i]+" repeated "+lastindex+" position !!!");
+		}
+		
+		System.out.println("\n------------------------- ");
+	}
+	
+	
+	//-----------------------TWENTYSEVEN----------------------------
+	
+	
+	public static void  checkelementexist(int[] a){
+		int target=7;
+		boolean ispresent=false;
+		
+		System.out.println("\nCheck Element Exists !!");
+		for(int i=0;i<a.length;i++){
+			if(a[i]==target){
+				ispresent=true;
+			}
+		}
+		
+		if(ispresent){
+			System.out.println("\nYes we have this number ---> "+target);
+		}
+		else{
+			System.out.println("\nNope didn't have this number ---> "+target);
+		}
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//-----------------------TWENTYEIGHT----------------------------
+	
+	
+	public static void missingnumber(){
+		int[] a={1,2,3,5};
+		
+		int n=5;
+		boolean[] visit =new boolean[n+1];
+		
+		System.out.print("\nMissing number are ---> ");
+		
+		for(int num:a){
+			visit[num]=true;
+		}
+		
+		for(int i=1;i<n;i++){
+			if(!visit[i]){
+				System.out.print(i+" ");
+			}
+		}
+		
+		System.out.println("\n\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------TWENTYNINE-----------------------------
+	
+	
+	public static void missingnumbers(int[] a){
+		int n=10;
+		boolean[] visit=new boolean[n+1];
+		
+		System.out.print("\nMissing numbers are ---> ");
+		
+		for(int num:a){
+			visit[num]=true;
+		}
+		
+		for(int i=1;i<n;i++){
+			if(!visit[i]){
+				System.out.print(i+" ");
+			}
+		}
+		
+		System.out.println("\n\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------THIRTY-----------------------------
+	
+	
+	public static void findindex(int[] a){
+		int target=7;
+		
+		System.out.println("\nFind Index !!  \n");
+		for(int i=0;i<a.length;i++){
+			if(target==a[i]){
+				System.out.println(target+" present in index of --> "+i);
+			}
+		}
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	
+	//----------------------FIFTYONE-----------------------------
+	
+	
+	public static void leftrotatebyone(int[] a){
+		
+		int[] a1=a.clone();
+		
+		int temp=a1[0];
+		
+		for(int i=0;i<a1.length-1;i++){				
+				a1[i]=a1[i+1];
+		}
+		
+		a1[a1.length-1]=temp;
+		
+		System.out.println("\nLeft rotate by one unit ---> "+Arrays.toString(a1));
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------FIFTYTWO-----------------------------
+	
+	
+	public static void rightrotatebyone(int[] a){
+		
+		int[] a2=a.clone();
+		
+		int temp=a2[a2.length-1];
+		
+		for(int i=a2.length-1;i>0;i--){				
+				a2[i]=a2[i-1];
+		}
+		
+		a2[0]=temp;
+		
+		System.out.println("\nRight rotate by one unit ---> "+Arrays.toString(a2));
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+		
+		
+	//----------------------FIFTYTHREE-----------------------------
+	
+	
+	public static void leftrotatebyktimes(int[] a){
+		
+		int[] a3=a.clone();
+		
+		int ktimes=1;
+		int temp=a3[0];
+		
+		for(int k=1;k<=ktimes;k++){
+			
+		for(int i=0;i<a3.length-1;i++){				
+				a3[i]=a3[i+1];
+		}
+		
+		}
+		
+		a3[a3.length-1]=temp;
+		
+		System.out.println("\nLeft rotate by k times ---> "+Arrays.toString(a3));
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------FIFTYFOUR-----------------------------
+	
+	
+	public static void rightrotatebyktimes(int[] a){
+		int[] a4=a.clone();
+		
+		int ktimes=1;
+		
+		int temp=a4[a4.length-1];
+		
+		for(int k=1;k<=ktimes;k++){
+			
+			for(int i=a4.length-1;i>0;i--){
+				
+				a4[i]=a4[i-1];
+				
+			}
+		}
+		
+		a4[0]=temp;
+		
+		System.out.println("\nRight rotate by k times ---> "+Arrays.toString(a4));
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------FIFTYFIVE-----------------------------
+	
+	
+	public static void reverseafterrotation(int[] a){
+		
+		int temp=a[0];
+		
+		for(int i=0;i<a.length-1;i++){
+			a[i]=a[i+1];
+		}
+		
+		a[a.length-1]=temp;
+		
+		System.out.println("\nLeft rotaion by 1 unit --> "+Arrays.toString(a));
+		
+		int[] rev=new int[a.length];
+		
+		int last=a[a.length-1];
+		
+		for(int i=0;i<a.length;i++){
+			rev[last]=a[i];
+			last--;
+		}
+		
+		System.out.println("\nReversed left rotation by 1 unit --> "+Arrays.toString(rev));
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------FIFTYSEVEN-----------------------------
+	
+	
+	public static void clockwiserotate(int[] a){
+		
+		
+		int temp=a[a.length-1];
+		
+		for(int i=a.length-1;i>0;i--){				
+				a[i]=a[i-1];
+		}
+		
+		a[0]=temp;
+		
+		System.out.println("\nClock wise rotate by one unit ---> "+Arrays.toString(a));
+		
+		System.out.println("\n------------------------- ");
+		
+	}
+	
+	
+	//----------------------FIFTYEIGHT-----------------------------
+	
+	
+	public static void anticlockwiserotate(int[] a){
+		
+		int temp=a[0];
+		
+		for(int i=0;i<a.length-1;i++){				
+				a[i]=a[i+1];
+		}
+		
+		a[a.length-1]=temp;
+		
+		System.out.println("\nAnti clock wise rotate by one unit ---> "+Arrays.toString(a));
+		
+		System.out.println("\n------------------------- \n");
+		
+	}
+	
+	
+	//----------------------FIFTYNINE-----------------------------
+	
+	
+	public static void splitarray(int[] a){
+		
+		int half=a.length/2;
+		
+		for(int i=0;i<half;i++){
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.print("||SPILLED|| ");
+		
+		for(int i=half;i<a.length;i++){
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println("\n\n------------------------- \n");
+		
+	}
+	
+	
+	//----------------------SIXTY-----------------------------
+	
+	
+	public static void mergearray(){
+		
+		int[] a={10,20};
+		int[] b={30,40};
+		
+		System.out.println("Array 1 ---> "+Arrays.toString(a));
+		System.out.println("Array 2 ---> "+Arrays.toString(b));
+		
+		System.out.print("\n MERGED ---> ");
+		
+		int[] res=new int[a.length+b.length];
+		
+		int index=0;
+		
+		for(int i=0;i<a.length;i++){
+			res[index++]=a[i];
+		}
+		
+		
+		
+		for(int j=0;j<b.length;j++){
+			res[index++]=b[j];
+		}
+		
+		System.out.println(Arrays.toString(res));
+		
+		System.out.println("\n------------------------- ");
+	}
+	
+	
+	
+	//----------------------MAIN METHOD-----------------------------
+	
+	
+	public static void main(String[] args) 
+	{
+		int[] a={7,3,1,1,4,10,7,8};
+		
+		// ------- 1 to 11 -------
+		printread(a);
+		sum(a);
+		avg(a);
+		max(a);
+		min(a);
+		counteven(a);
+		countodd(a);
+		countpositivenum(a);
+		countnegativenum(a);
+		revarray(a);
+		copyarray(a);
+		
+		// ------- 12 to 20 -------
+		printalternate(a);
+		printfirsthalf(a);
+		printsecondhalf(a);
+		findarraylength(a);
+		secondmax(a);
+		secondmin(a);
+		thirdmax(a);
+		thirdmin(a);
+		swap(a);
+		
+		// ------- 21 to 30 -------
+		linearsearch(a);
+		binarysearch(a);
+		multipleoccurence(a);
+		countoccurences(a);
+		firstoccurence(a);
+		lastoccurence(a);
+		checkelementexist(a);
+		missingnumber();
+		missingnumbers(a);
+		findindex(a);
+		
+		// ------- 51 to 60 -------
+		leftrotatebyone(a);
+		rightrotatebyone(a);
+		leftrotatebyktimes(a);
+		rightrotatebyktimes(a);
+		
+		reverseafterrotation(a.clone());
+		clockwiserotate(a.clone());
+		anticlockwiserotate(a.clone());
+		splitarray(a.clone());
+		mergearray();
+		
+	}
+}

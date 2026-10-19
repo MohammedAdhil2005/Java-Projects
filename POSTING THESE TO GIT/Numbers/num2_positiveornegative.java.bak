@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class  num2_positiveornegative
+{
+	public static void posorneg(int n){
+		if(n==0){
+			System.out.println("its zero ->>  "+n);
+		}
+		else if (n<0)
+		{
+			System.out.println("its negative num ->>  "+n);
+		}
+		else{
+			System.out.println("its positive num ->>  "+n);
+		}
+	}
+	public static void main(String[] args) 
+	{
+		Scanner scan =new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num=scan.nextInt();
+		posorneg(num);
+	}
+}

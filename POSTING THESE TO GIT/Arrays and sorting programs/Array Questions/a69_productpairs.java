@@ -1,0 +1,27 @@
+class a69_productpairs
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {2, 3, 4, 6, 8};
+        int target = 24;
+		
+		boolean ispresent=false;
+		
+		for(int i=0;i<a.length;i++){
+			
+			for(int j=i+1;j<a.length;j++){
+				int temp=a[i]*a[j];
+
+				if(temp==target){
+					System.out.println(a[i]+" * "+a[j]+" product of ---> "+target);
+					ispresent=true;
+				}
+			}
+		}
+		
+		if(!ispresent){
+			System.out.println("\nNo matching pairs!!!!");
+		}
+			
+	}
+}

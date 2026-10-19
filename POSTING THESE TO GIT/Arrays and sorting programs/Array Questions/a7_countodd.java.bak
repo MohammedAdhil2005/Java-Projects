@@ -1,0 +1,20 @@
+class a7_countodd 
+{
+	
+	
+	public static void oc(int[] a){
+		int oc=0;
+		
+		for(int i=0;i<a.length;i++){
+			if(a[i]/2!=0){
+				oc++;
+			}
+		}
+		System.out.println("Odd count is --->"+oc);
+	}
+	public static void main(String[] args) 
+	{
+		int[] a={7,3,5,10,4,8};
+		oc(a);
+	}
+}

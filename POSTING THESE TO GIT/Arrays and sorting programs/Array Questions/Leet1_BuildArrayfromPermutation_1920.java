@@ -1,0 +1,29 @@
+import java.util.Arrays;
+
+class Leet1_BuildArrayfromPermutation_1920
+{
+	
+	public static void buildarray(int[] a){
+		
+		System.out.println("\nOrg array is ---> "+Arrays.toString(a));
+		
+		int[] ans=new int[a.length];
+		
+		for(int i=0;i<a.length;i++){
+			
+			ans[i]=a[a[i]];
+			
+		}
+		
+		System.out.println("\nPermuted array is ---> "+Arrays.toString(ans));
+
+	}
+	
+	public static void main(String[] args) 
+	{
+		int[] a={0,2,1,5,3,4};  //another input --> [0,2,1]
+		
+		buildarray(a);
+		
+	}
+}

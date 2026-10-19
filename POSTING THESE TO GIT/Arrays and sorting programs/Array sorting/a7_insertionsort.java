@@ -1,0 +1,25 @@
+import java.util.Arrays;
+class  a7_insertionsort
+{
+	public static void main(String[] args) 
+	{
+		int[] a={8,5,4,3};
+		
+		for(int i=1;i<a.length;i++){
+			
+			int key=a[i];
+			
+			int sort=i-1;
+			
+			while(sort>=0 && a[sort]>key){
+				
+				a[sort+1]=a[sort];
+				
+				sort--;
+			}
+			
+			a[sort+1]=key;
+		}
+		System.out.println(Arrays.toString(a));
+	}
+}

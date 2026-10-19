@@ -1,0 +1,16 @@
+class Main2 
+{
+	public static void main(String[] args) 
+	{
+		jeep j1=new jeep("Mahindra","green",7500);
+		
+		System.out.println("\njeep name ---->"+j1.jname);
+		System.out.println("\njeep color ---->"+j1.jcolor);
+		System.out.println("\njeep price ---->"+j1.jprice);
+		
+		System.out.println("\n------ jeep engine ------ ");
+		j1.jengine(new jengine("gas",5000));
+		System.out.println("\njeep engine type ---->"+j1.j.type);
+		System.out.println("\njeep engine power ---->"+j1.j.hp);
+	}
+}

@@ -1,0 +1,26 @@
+import numberscode8_factorial;
+class num23_strongnumber 
+{
+	public static boolean strong(int n){
+		int sum=0;
+		int org=n;
+		
+		while(n!=0){
+			    int last=n%10;
+				sum=sum+code8_factorial.facto(last);
+			    n=n/10;
+		}
+		return sum==org;
+	}
+	public static void main(String[] args) 
+	{
+		int num=145;
+		boolean res=strong(num);
+		if(res){
+			System.out.println("Strong");
+		}
+		else{
+			System.out.println("not Strong");
+		}
+	}
+}

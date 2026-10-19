@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class num3_largestofthree 
+{
+	public static int islarger(int a,int b, int c){
+		int largenum=(a>b && a>c)? a : (b>c)? b:c;
+		return largenum;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter 1st number");
+		int a=scan.nextInt();
+		System.out.println("Enter 2nd number");
+		int b=scan.nextInt();
+		System.out.println("Enter 3rd number");
+		int c=scan.nextInt();
+		int res=islarger(a,b,c);
+		System.out.println("the largest num is "+res);
+
+	}
+}

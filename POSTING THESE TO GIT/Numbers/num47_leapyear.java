@@ -1,0 +1,17 @@
+class num47_leapyear
+{
+	public static void leapyear(int n){
+		if(n%400==0 ||n%4==0 && n%100!=0 ){
+			System.out.println("Leap year");
+		}
+		else{
+			System.out.println("not leap year");
+		}
+	}
+	public static void main(String[] args) 
+	{
+		int num =2024;
+		leapyear(num);
+		
+	}
+}

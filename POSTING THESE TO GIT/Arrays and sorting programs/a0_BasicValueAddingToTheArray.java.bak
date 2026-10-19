@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class a0_BasicValueAddingToTheArray
+{
+	public static void add(int[] a){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter arrays value----> ");
+		for(int i=0;i<a.length;i++){
+			System.out.print(i+". position - ");
+			a[i]=sc.nextInt();
+		}	
+	}
+	
+	
+	public static void print(int[] p){
+		System.out.println("\n \nArrays stored values are---->");
+		for(int i=0;i<p.length;i++){
+			System.out.println(p[i]);
+		}
+	}
+	
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of an array----> ");
+		int[] a=new int[sc.nextInt()];
+		add(a);
+		print(a);
+		
+	}
+}
