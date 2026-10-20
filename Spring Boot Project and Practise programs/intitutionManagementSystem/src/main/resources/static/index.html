@@ -1,0 +1,51 @@
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <title>Document</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Student Management System</h2>-->
+
+<!--<button onclick="getStudents()">Test Backend</button>-->
+
+<!--<p id="result"></p>-->
+
+<!--<script>-->
+<!--    function getStudents() {-->
+<!--        fetch('/students/hello')-->
+<!--            .then(response => response.text())-->
+<!--            .then(data => {-->
+<!--                document.getElementById('result').innerText = data;-->
+<!--            });-->
+<!--    }-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>IPL</h1>
+<button onclick="getfunc()" >Champion</button>
+<p id="res"></p>
+
+<script>
+    function getfunc(){
+        fetch('/adhil/a18')
+            .then(responce => responce.text())
+            .then(dummy => {
+                document.getElementById('res').innerText=dummy;
+            });
+    }
+</script>
+</body>
+</html>

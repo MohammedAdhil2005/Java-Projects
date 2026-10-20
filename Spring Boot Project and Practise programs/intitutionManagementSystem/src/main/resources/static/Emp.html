@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #cccccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #263b80;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 12px 18px;
+            margin: 8px 5px 8px 0;
+            border: none;
+            border-radius: 6px;
+            background: #263b80;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #172554;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Employee Management</h1>
+
+    <form id="employeeForm">
+        <input type="text" id="name"
+               placeholder="Employee Name" required>
+
+        <input type="email" id="email"
+               placeholder="Employee Email" required>
+
+        <input type="number" id="salary"
+               placeholder="Employee Salary"
+               min="0" step="0.01" required>
+
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <button type="button" onclick="getEmployees()">
+        View Employees
+    </button>
+
+    <p id="message"></p>
+    <div id="employeeList"></div>
+</div>
+
+<script>
+    const form = document.getElementById("employeeForm");
+    const message = document.getElementById("message");
+
+    // Add Employee
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const employee = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            salary: Number(document.getElementById("salary").value)
+        };
+
+        try {
+            const response = await fetch("/employees", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(employee)
+            });
+
+            message.textContent = await response.text();
+
+            if (response.ok) {
+                form.reset();
+            }
+        } catch (error) {
+            message.textContent = "Error adding employee!";
+        }
+    });
+
+    // View Employees
+    async function getEmployees() {
+        try {
+            const response = await fetch("/employees");
+            const employees = await response.json();
+
+            const list = document.getElementById("employeeList");
+            list.innerHTML = "";
+
+            employees.forEach(emp => {
+                const item = document.createElement("p");
+                item.textContent = `ID: ${emp.id} | Name: ${emp.name} | Email: ${emp.email} | Salary: ${emp.salary}`;
+                list.appendChild(item);
+            });
+        } catch (error) {
+            message.textContent = "Error loading employees!";
+        }
+    }
+</script>
+
+</body>
+</html>
